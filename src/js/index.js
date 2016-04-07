@@ -46,7 +46,9 @@ let renderDashboard = () => ReactDOM.render (
 	, document.querySelector('.app')
 	);
 
+//renderStart();
 
+renderImageList();
 
 
 // let renderStart = () => {
@@ -70,10 +72,7 @@ let renderDashboard = () => ReactDOM.render (
 //data.append('points',)
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> d0b1d6ed3140a9b7cb98da19c7f53288d16fcb02
 //ajax({
 //url:'',
 	//type: 'POST'
@@ -95,19 +94,8 @@ let renderDashboard = () => ReactDOM.render (
 
 
 
-<<<<<<< HEAD
-
-let renderPlaypage () => {
-	ReactDOM.render(
-		<PlayPage onGuess={help}/>,
-		document.querySelector('.app')
-		);
-}
 
 
-
-=======
->>>>>>> d0b1d6ed3140a9b7cb98da19c7f53288d16fcb02
 // 	ajax({
 // 		url:'http://ironpics.herokuapp.com/registrations',
 // 		type: 'POST'
@@ -159,9 +147,6 @@ let renderPlaypage () => {
 // 		, document.querySelector('.app')
 // 		);
 // };
-renderStart();
-<<<<<<< HEAD
-=======
 
->>>>>>> d0b1d6ed3140a9b7cb98da19c7f53288d16fcb02
+
 
