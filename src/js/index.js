@@ -21,6 +21,10 @@ import Account from './Account';
 //ajax({
 	//url:'',
 	//type: 'POST'
+	//headers: {
+		//dude: man,
+		//girl: boy,
+	//}
 	//data: data,
 	//cache: false,
 	//dataType: 'json',

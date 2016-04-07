@@ -15,7 +15,7 @@ export default class Contribute extends Component {
 	}
 
 	dataHandler(formData) {
-		this.props.onSubmit(formDada);
+		this.props.onSubmit(formData);
 	}
 
 	dropHandler([file]) {
