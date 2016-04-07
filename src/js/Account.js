@@ -37,7 +37,7 @@ export default class Account extends Component {
 					<div>
 						<label>
 						Password
-						<input type="hidden" name="password"/>
+						<input type="password" name="password"/>
 						</label>
 					</div>
 					<button>Submit</button>
