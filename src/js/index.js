@@ -8,8 +8,7 @@ import Playpage from './playpage';
 import { ajax } from 'jquery';
 import Dashboard from './Dashboard';
 
-<<<<<<< HEAD
-=======
+
 //let loggedInUser = null;
 
 function renderLogin (x) {
@@ -68,7 +67,7 @@ let renderStart = (user) => ReactDOM.render(
 //data.append('points',)
 
 
-<<<<<<< HEAD
+
 //ajax({
 //url:'',
 	//type: 'POST'
@@ -102,7 +101,7 @@ let renderPlaypage () => {
 }
 
 
-=======
+
 // 	ajax({
 // 		url:'http://ironpics.herokuapp.com/registrations',
 // 		type: 'POST'
@@ -155,6 +154,4 @@ let renderPlaypage () => {
 // 		);
 // };
 renderStart();
->>>>>>> 66a475ee556f6d6ed5b3548094a75ac10900072b
 
->>>>>>> 6cae36dd860cf30ddfdc71f4ae8077bd74025add
