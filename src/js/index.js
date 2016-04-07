@@ -2,27 +2,36 @@
 import React from 'react';
 import Startscreen from './Startscreen';
 import Account from './Account';
-import contribute_page from './contribute_page';
-import playpage from './playpage';
+import Contribute from './contribute_page';
+import Playpage from './playpage';
+import { ajax } from 'jquery';
+import Dashboard from './Dashboard';
 
 //let loggedInUser = null;
 
 //let renderStart = () => 
 	//const url = '';
 
-
-
 	//ajax({url}).then(data => {
 		//ReactDOM.render(
 	//<Startscreen onCreate={renderSignIn}/>
-	//, document.querySelector('.app')
+//, document.querySelector('.app')
 	//);
-//};
+//});
 
+//let data = new formData();
+//data.append('username',)
+//data.append('email',)
+//data.append('password_digest',)
+//data.append('image_url',)
+//data.append('solution',)
+//data.append('title',)
+//data.append('guess',)
+//data.append('points',)
 
 
 //ajax({
-	//url:'',
+//url:'',
 	//type: 'POST'
 	//headers: {
 		//X-access-token: man,
@@ -34,5 +43,5 @@ import playpage from './playpage';
 	//processData: false,
 	//contentType: false
 //}).then(() => {
-	//renderStart();
-//});
+	//}renderStart();
+//);
