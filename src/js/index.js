@@ -2,7 +2,10 @@
 import React from 'react';
 import Startscreen from './Startscreen';
 import Account from './Account';
+import contribute_page from './contribute_page';
+import playpage from './playpage';
 
+//let loggedInUser = null;
 
 //let renderStart = () => 
 	//const url = '';
@@ -22,8 +25,8 @@ import Account from './Account';
 	//url:'',
 	//type: 'POST'
 	//headers: {
-		//dude: man,
-		//girl: boy,
+		//X-access-token: man,
+		//X-girl: boy,
 	//}
 	//data: data,
 	//cache: false,

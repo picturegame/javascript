@@ -14,20 +14,20 @@ export default class Contribute extends Component {
 		}
 	}
 
-	dataHandler(formData) {
-		this.props.onSubmit(formData);
-	}
+	//dataHandler(formData) {
+		//this.props.onSubmit(formData);
+	//}
 
-	dropHandler([file]) {
-		this.setState({preview: file.preview})
-	}
+	//dropHandler([file]) {
+		//this.setState({preview: file.preview})
+	//}
 
 
 	render() {
 		return (
 			<div className="contribute-wrapper">
 				<SSF onData={::this.dataHandler}>
-					<div className="dropzone-wrapper"
+					<div className="dropzone-wrapper">
 						<Dropzone onDrop={::this.dropHandler}>
 							<span className="drop-span">Drop Something Here</span>
 							<input type="hidden" value={this.state.preview} name="photo"/>

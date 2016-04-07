@@ -19,7 +19,7 @@ export default class PlayPage extends Component {
 		return (
 			<div>
 				<h2>{this.props.title}</h2>
-				<img src={} value={} name={}/>
+				<img src="{#}" value="{#}" name="{#}"/>
 				<span>Guess the caption! value={this.props.guess}</span>
 				<button onClick="onGuess">Submit</button>
 			</div>
