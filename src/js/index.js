@@ -10,11 +10,7 @@ import Dashboard from './Dashboard';
 import ImageList from './ImageList';
 
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 82ee1a1fa2fb894e8b20f4b4c1fc52ba12babf57
-//let loggedInUser = null;
 
 function renderLogin () {
 	console.log("hi");
@@ -72,136 +68,7 @@ let renderDashboard = () => ReactDOM.render (
 
 
 
-// let renderStart = () => {
-// 	ajax('http://ironpics.herokuapp.com')
-	//ajax({url}).then(data => {
-		//ReactDOM.render(
-	//<Startscreen onCreate={createandRender}/>
-//, document.querySelector('.app')
-	//);
-//});
-//};
-
-//let data = new formData();
-//data.append('username',)
-//data.append('email',)
-//data.append('password_digest',)
-//data.append('image_url',)
-//data.append('solution',)
-//data.append('title',)
-//data.append('guess',)
-//data.append('points',)
 
 
-<<<<<<< HEAD
-
-=======
->>>>>>> d0b1d6ed3140a9b7cb98da19c7f53288d16fcb02
-//ajax({
-//url:'',
-	//type: 'POST'
-	//headers: {
-		//X-access-token: man,
-		//X-girl: boy,
-	//}
-	//data: data,
-	//cache: false,
-	//dataType: 'json',
-	//processData: false,
-	//contentType: false
-//}).then(() => {
-	//}renderStart();
-//);
-
-
-
-
-<<<<<<< HEAD
-
-
-
-<<<<<<< HEAD
-=======
-
-
-=======
-<<<<<<< HEAD
-
-let renderPlaypage () => {
-	ReactDOM.render(
-		<PlayPage onGuess={help}/>,
-		document.querySelector('.app')
-		);
-}
-
-
-
-=======
->>>>>>> 9e9ddf5e7819c80cd2518812ea682dd21e2c36cc
->>>>>>> d0b1d6ed3140a9b7cb98da19c7f53288d16fcb02
-// 	ajax({
-// 		url:'http://ironpics.herokuapp.com/registrations',
-// 		type: 'POST'
-// 	//headers: {
-// 		//X-access-token: man,
-// 		//X-girl: boy,
-// 		//}
-// 		data: data,
-// 		cache: false,
-// 		dataType: 'json',
-// 		processData: false,
-// 		contentType: false
-// }).then(() => {
-// 	}renderStart();
-// );
-// ReactDOM.render(
-// 		<Account/> 		, 
-// 		document.querySelector('.app')
-//  		);
-
-
-
-
-
-
-// let createandRender = (player) => {
-// 	let data = new playerData();
-// data.append('username', player.name);
-// data.append('email', player.email);
-// data.append('password', player.password);
-
-// ajax({
-// url:'http://ironpics.herokuapp.com',
-// 	type: 'POST',
-// 	//headers: {
-// 		//X-access-token: man,
-// 		//X-girl: boy,
-// 	//}
-// 	data: form,
-// 	cache: false,
-// 	dataType: 'json',
-// 	processData: false,
-// 	contentType: false
-// }).then(() => {
-// 	renderStart();
-// );
-// 	ReactDOM.render(
-// 		<Account/>
-// 		, document.querySelector('.app')
-// 		);
-// };
 renderStart();
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> d0b1d6ed3140a9b7cb98da19c7f53288d16fcb02
-=======
-=======
->>>>>>> 9e9ddf5e7819c80cd2518812ea682dd21e2c36cc
-
-<<<<<<< HEAD
-=======
->>>>>>> d0b1d6ed3140a9b7cb98da19c7f53288d16fcb02
-
->>>>>>> 82ee1a1fa2fb894e8b20f4b4c1fc52ba12babf57
