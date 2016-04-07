@@ -66,6 +66,41 @@ let renderStart = (user) => ReactDOM.render(
 //data.append('points',)
 
 
+<<<<<<< HEAD
+//ajax({
+//url:'',
+	//type: 'POST'
+	//headers: {
+		//X-access-token: man,
+		//X-girl: boy,
+	//}
+	//data: data,
+	//cache: false,
+	//dataType: 'json',
+	//processData: false,
+	//contentType: false
+//}).then(() => {
+	//}renderStart();
+//);
+
+
+
+
+function help(x) {
+	x => x;
+}
+
+
+
+let renderPlaypage () => {
+	ReactDOM.render(
+		<PlayPage onGuess={help}/>,
+		document.querySelector('.app')
+		);
+}
+
+
+=======
 // 	ajax({
 // 		url:'http://ironpics.herokuapp.com/registrations',
 // 		type: 'POST'
@@ -118,4 +153,5 @@ let renderStart = (user) => ReactDOM.render(
 // 		);
 // };
 renderStart();
+>>>>>>> 66a475ee556f6d6ed5b3548094a75ac10900072b
 
