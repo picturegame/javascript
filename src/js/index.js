@@ -14,8 +14,34 @@ function renderLogin (x) {
 	console.log(x => x);
 }
 
+let PlayPage = () => ReactDOM.render (
+	<PlayPage onGuess={renderDashboard}/>
+	, document.querySelector('.app')
+	);
+
+let renderContribute = () => ReactDOM.render (
+	<Contribute onSubmit={renderImageList}/>
+	, document.querySelector('.app')
+	);
+
+let renderImageList = () => ReactDOM.render (
+	<ImageList onImgSelect={PlayPage}/>
+	, document.querySelector('.app')
+	);
+
+let renderDashboard = () => ReactDOM.render (
+	<Dashboard onPlay={renderImageList} onCont={renderContribute}/>
+	, document.querySelector('.app')
+	);
+
+
+let renderAccount = () => ReactDOM.render (
+	<Account onSave={renderDashboard}/>
+	, document.querySelector('.app')
+	);
+
 let renderStart = (user) => ReactDOM.render(
-	<Startscreen user={user} onLogin={renderLogin}/>
+	<Startscreen user={user} onLogin={renderLogin} onCreate={renderAccount}/>
 	, document.querySelector('.app')
 	);
 
