@@ -10,6 +10,10 @@ import Dashboard from './Dashboard';
 import ImageList from './ImageList';
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 82ee1a1fa2fb894e8b20f4b4c1fc52ba12babf57
 //let loggedInUser = null;
 
 function renderLogin () {
@@ -89,6 +93,10 @@ let renderDashboard = () => ReactDOM.render (
 //data.append('points',)
 
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> d0b1d6ed3140a9b7cb98da19c7f53288d16fcb02
 //ajax({
 //url:'',
 	//type: 'POST'
@@ -108,8 +116,29 @@ let renderDashboard = () => ReactDOM.render (
 
 
 
+<<<<<<< HEAD
 
 
+
+<<<<<<< HEAD
+=======
+
+
+=======
+<<<<<<< HEAD
+
+let renderPlaypage () => {
+	ReactDOM.render(
+		<PlayPage onGuess={help}/>,
+		document.querySelector('.app')
+		);
+}
+
+
+
+=======
+>>>>>>> 9e9ddf5e7819c80cd2518812ea682dd21e2c36cc
+>>>>>>> d0b1d6ed3140a9b7cb98da19c7f53288d16fcb02
 // 	ajax({
 // 		url:'http://ironpics.herokuapp.com/registrations',
 // 		type: 'POST'
@@ -162,4 +191,17 @@ let renderDashboard = () => ReactDOM.render (
 // 		);
 // };
 renderStart();
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> d0b1d6ed3140a9b7cb98da19c7f53288d16fcb02
+=======
+=======
+>>>>>>> 9e9ddf5e7819c80cd2518812ea682dd21e2c36cc
+
+<<<<<<< HEAD
+=======
+>>>>>>> d0b1d6ed3140a9b7cb98da19c7f53288d16fcb02
+
+>>>>>>> 82ee1a1fa2fb894e8b20f4b4c1fc52ba12babf57
