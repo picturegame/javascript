@@ -66,7 +66,7 @@ let renderStart = (user) => ReactDOM.render(
 //data.append('points',)
 
 
-<<<<<<< HEAD
+
 //ajax({
 //url:'',
 	//type: 'POST'
@@ -86,21 +86,9 @@ let renderStart = (user) => ReactDOM.render(
 
 
 
-function help(x) {
-	x => x;
-}
 
 
 
-let renderPlaypage () => {
-	ReactDOM.render(
-		<PlayPage onGuess={help}/>,
-		document.querySelector('.app')
-		);
-}
-
-
-=======
 // 	ajax({
 // 		url:'http://ironpics.herokuapp.com/registrations',
 // 		type: 'POST'
@@ -153,5 +141,5 @@ let renderPlaypage () => {
 // 		);
 // };
 renderStart();
->>>>>>> 66a475ee556f6d6ed5b3548094a75ac10900072b
+
 
