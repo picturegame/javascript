@@ -45,3 +45,22 @@ import Dashboard from './Dashboard';
 //}).then(() => {
 	//}renderStart();
 //);
+
+
+
+
+function help(x) {
+	x => x;
+}
+
+
+
+let renderPlaypage () => {
+	ReactDOM.render(
+		<PlayPage onGuess={help}/>,
+		document.querySelector('.app')
+		);
+}
+
+
+
