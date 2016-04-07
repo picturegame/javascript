@@ -7,13 +7,36 @@ import Contribute from './contribute_page';
 import Playpage from './playpage';
 import { ajax } from 'jquery';
 import Dashboard from './Dashboard';
+import ImageList from './ImageList';
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 82ee1a1fa2fb894e8b20f4b4c1fc52ba12babf57
 //let loggedInUser = null;
 
 function renderLogin () {
 	console.log("hi");
 }
+
+function saveUser () {
+	ajax({
+		url: 'http://ironpics.herokuapp.com/registrations',
+		type: 'POST',
+		data: {
+			username: "username",
+			password: "password",
+			email: "email"
+		},
+		cache: false,
+		dataType: 'json',
+		processData: false,
+		contentType: false
+		}).then( () => {
+		renderDashboard(); 
+		});
+		}
 
 let renderAccount = () => ReactDOM.render (
 	<Account onSave={renderDashboard}/>
@@ -92,10 +115,34 @@ renderImageList();
 
 
 
+<<<<<<< HEAD
 
 
 
+<<<<<<< HEAD
+=======
 
+
+<<<<<<< HEAD
+
+
+=======
+=======
+<<<<<<< HEAD
+
+let renderPlaypage () => {
+	ReactDOM.render(
+		<PlayPage onGuess={help}/>,
+		document.querySelector('.app')
+		);
+}
+
+
+
+=======
+>>>>>>> 9e9ddf5e7819c80cd2518812ea682dd21e2c36cc
+>>>>>>> d0b1d6ed3140a9b7cb98da19c7f53288d16fcb02
+>>>>>>> 450a9b5239ec517d3a3bab93ded1367aec870800
 // 	ajax({
 // 		url:'http://ironpics.herokuapp.com/registrations',
 // 		type: 'POST'
@@ -147,6 +194,23 @@ renderImageList();
 // 		, document.querySelector('.app')
 // 		);
 // };
+<<<<<<< HEAD
 
 
+=======
+renderStart();
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> d0b1d6ed3140a9b7cb98da19c7f53288d16fcb02
+=======
+=======
+>>>>>>> 9e9ddf5e7819c80cd2518812ea682dd21e2c36cc
+
+<<<<<<< HEAD
+=======
+>>>>>>> d0b1d6ed3140a9b7cb98da19c7f53288d16fcb02
+>>>>>>> 450a9b5239ec517d3a3bab93ded1367aec870800
+
+>>>>>>> 82ee1a1fa2fb894e8b20f4b4c1fc52ba12babf57

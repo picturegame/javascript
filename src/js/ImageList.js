@@ -5,9 +5,9 @@ export default class ImageList extends Component {
 		user: PropTypes.arrayOf(PropTypes.shape ({
 			img_url: PropTypes.string.isRequired,
 			title: PropTypes.string.isRequired,
-			username: PropTypes.string.isRequired
-		});).isRequired,
-		onImgSelect: PropTypes.func.isRequired,
+			username: PropTypes.string.isRequired,
+		})).isRequired,
+		onImgSelect: PropTypes.func.isRequired
 	}
 
 	getImage(user) {
