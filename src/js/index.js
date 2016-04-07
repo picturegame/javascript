@@ -11,11 +11,22 @@ import Dashboard from './Dashboard';
 
 //let loggedInUser = null;
 
-function renderLogin (x) {
-	console.log(x => x);
+function renderLogin () {
+	console.log("hi");
 }
 
-let PlayPage = () => ReactDOM.render (
+let renderAccount = () => ReactDOM.render (
+	<Account onSave={renderDashboard}/>
+	, document.querySelector('.app')
+	);
+
+let renderStart = (user) => ReactDOM.render(
+	<Startscreen user={user} onLogin={renderLogin} onCreate={renderAccount}/>
+	, document.querySelector('.app')
+	);
+
+
+let renderPlayPage = () => ReactDOM.render (
 	<PlayPage onGuess={renderDashboard}/>
 	, document.querySelector('.app')
 	);
@@ -36,15 +47,7 @@ let renderDashboard = () => ReactDOM.render (
 	);
 
 
-let renderAccount = () => ReactDOM.render (
-	<Account onSave={renderDashboard}/>
-	, document.querySelector('.app')
-	);
 
-let renderStart = (user) => ReactDOM.render(
-	<Startscreen user={user} onLogin={renderLogin} onCreate={renderAccount}/>
-	, document.querySelector('.app')
-	);
 
 // let renderStart = () => {
 // 	ajax('http://ironpics.herokuapp.com')
@@ -67,7 +70,10 @@ let renderStart = (user) => ReactDOM.render(
 //data.append('points',)
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> d0b1d6ed3140a9b7cb98da19c7f53288d16fcb02
 //ajax({
 //url:'',
 	//type: 'POST'
@@ -87,11 +93,9 @@ let renderStart = (user) => ReactDOM.render(
 
 
 
-function help(x) {
-	x => x;
-}
 
 
+<<<<<<< HEAD
 
 let renderPlaypage () => {
 	ReactDOM.render(
@@ -102,6 +106,8 @@ let renderPlaypage () => {
 
 
 
+=======
+>>>>>>> d0b1d6ed3140a9b7cb98da19c7f53288d16fcb02
 // 	ajax({
 // 		url:'http://ironpics.herokuapp.com/registrations',
 // 		type: 'POST'
@@ -154,4 +160,8 @@ let renderPlaypage () => {
 // 		);
 // };
 renderStart();
+<<<<<<< HEAD
+=======
+
+>>>>>>> d0b1d6ed3140a9b7cb98da19c7f53288d16fcb02
 

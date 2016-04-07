@@ -3,14 +3,14 @@ import SSF from 'react-simple-serial-form';
 
 export default class Account extends Component {
 	static propTypes = {
-		username: PropTypes.string.isRequired,
-		email: PropTypes.string.isRequired,
-		password: PropTypes.string.isRequired,
-		//onSave: PropTypes.func.isRequired
+		// username: PropTypes.string.isRequired,
+		// email: PropTypes.string.isRequired,
+		// password: PropTypes.string.isRequired,
+		onSave: PropTypes.func.isRequired
 	}
 
 	dataHandler(formData) {
-		data.file = this.file;
+		// data.file = this.file;
 		this.props.onSave(formData);
 	}
 
