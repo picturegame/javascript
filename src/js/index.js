@@ -10,11 +10,11 @@ import Dashboard from './Dashboard';
 import ImageList from './ImageList';
 
 
+
 <<<<<<< HEAD
 =======
-
->>>>>>> 82ee1a1fa2fb894e8b20f4b4c1fc52ba12babf57
 //let loggedInUser = null;
+>>>>>>> 83d96a3cc2d0a519f03d25a3ec586c41baf19cb3
 
 function renderLogin () {
 	console.log("hi");
@@ -69,30 +69,22 @@ let renderDashboard = () => ReactDOM.render (
 	, document.querySelector('.app')
 	);
 
+//renderStart();
+
+renderImageList();
 
 
 
-// let renderStart = () => {
-// 	ajax('http://ironpics.herokuapp.com')
-	//ajax({url}).then(data => {
-		//ReactDOM.render(
-	//<Startscreen onCreate={createandRender}/>
-//, document.querySelector('.app')
-	//);
-//});
-//};
 
-//let data = new formData();
-//data.append('username',)
-//data.append('email',)
-//data.append('password_digest',)
-//data.append('image_url',)
-//data.append('solution',)
-//data.append('title',)
-//data.append('guess',)
-//data.append('points',)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+renderStart();
+
+=======
 
 
+>>>>>>> 30623a6181b0a556ae3cf109f082396308b4cad4
 //ajax({
 //url:'',
 	//type: 'POST'
@@ -113,6 +105,18 @@ let renderDashboard = () => ReactDOM.render (
 
 
 
+<<<<<<< HEAD
+=======
+let renderPlaypage () => {
+	ReactDOM.render(
+		<PlayPage onGuess={help}/>,
+		document.querySelector('.app')
+		);
+}
+
+
+
+>>>>>>> 30623a6181b0a556ae3cf109f082396308b4cad4
 // 	ajax({
 // 		url:'http://ironpics.herokuapp.com/registrations',
 // 		type: 'POST'
@@ -164,21 +168,25 @@ let renderDashboard = () => ReactDOM.render (
 // 		, document.querySelector('.app')
 // 		);
 // };
+<<<<<<< HEAD
 renderStart();
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> 30623a6181b0a556ae3cf109f082396308b4cad4
 
-=======
->>>>>>> d0b1d6ed3140a9b7cb98da19c7f53288d16fcb02
-=======
-=======
->>>>>>> 9e9ddf5e7819c80cd2518812ea682dd21e2c36cc
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> d0b1d6ed3140a9b7cb98da19c7f53288d16fcb02
 >>>>>>> 450a9b5239ec517d3a3bab93ded1367aec870800
+=======
+>>>>>>> 30623a6181b0a556ae3cf109f082396308b4cad4
 
->>>>>>> 82ee1a1fa2fb894e8b20f4b4c1fc52ba12babf57
+
+renderStart();
+
+>>>>>>> 83d96a3cc2d0a519f03d25a3ec586c41baf19cb3
