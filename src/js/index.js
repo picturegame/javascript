@@ -7,14 +7,32 @@ import Contribute from './contribute_page';
 import Playpage from './playpage';
 import { ajax } from 'jquery';
 import Dashboard from './Dashboard';
+import ImageList from './ImageList';
 
-<<<<<<< HEAD
-=======
+
 //let loggedInUser = null;
 
 function renderLogin () {
 	console.log("hi");
 }
+
+function saveUser () {
+	ajax({
+		url: 'http://ironpics.herokuapp.com/registrations',
+		type: 'POST',
+		data: {
+			username: "username",
+			password: "password",
+			email: "email"
+		},
+		cache: false,
+		dataType: 'json',
+		processData: false,
+		contentType: false
+		}).then( () => {
+		renderDashboard(); 
+		});
+		}
 
 let renderAccount = () => ReactDOM.render (
 	<Account onSave={renderDashboard}/>
@@ -145,5 +163,3 @@ let renderDashboard = () => ReactDOM.render (
 // };
 renderStart();
 
-
->>>>>>> 6cae36dd860cf30ddfdc71f4ae8077bd74025add

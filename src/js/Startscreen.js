@@ -32,10 +32,10 @@ export default class Startscreen extends Component {
 						</label>
 					</div>
 					<div className="on-login">
-						<button onClick={onLogin}>Login</button>
+						<button>Login</button>
 					</div>
 					<div className="on-create">
-						<button onClick={onCreate}>Create Account</button>
+						<a onClick={onCreate}>Create Account</a>
 					</div>
 				</SSF>
 			</div>
