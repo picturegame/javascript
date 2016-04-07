@@ -8,6 +8,8 @@ import Playpage from './playpage';
 import { ajax } from 'jquery';
 import Dashboard from './Dashboard';
 
+<<<<<<< HEAD
+=======
 //let loggedInUser = null;
 
 function renderLogin () {
@@ -144,3 +146,4 @@ let renderDashboard = () => ReactDOM.render (
 renderStart();
 
 
+>>>>>>> 6cae36dd860cf30ddfdc71f4ae8077bd74025add
