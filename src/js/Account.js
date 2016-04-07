@@ -40,6 +40,7 @@ export default class Account extends Component {
 						<input type="hidden" name="password"/>
 						</label>
 					</div>
+					<button>Submit</button>
 				</SSF>
 			</div>
 			)
