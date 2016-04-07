@@ -11,7 +11,7 @@ export default class Account extends Component {
 
 	dataHandler(formData) {
 		data.file = this.file;
-		//this.props.onSave(formData);
+		this.props.onSave(formData);
 	}
 
 
