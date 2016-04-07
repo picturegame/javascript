@@ -2,9 +2,9 @@ import React, {Component, PropTypes} from 'react';
 import SSF from 'react-simple-serial-form';
 
 export default class Startscreen extends Component {
-	static propTypes = {
-		//onLogin: PropTypes.func.isRequired
-		onCreate: PropTypes.func.isRequired
+	static propTypes = {		
+		onLogin: PropTypes.func.isRequired
+		//onCreate: PropTypes.func.isRequired
 		//onPlay: PropTypes.func.isRequired
 		//onCont: PropTypes.func.isRequired
 	}
@@ -18,7 +18,7 @@ export default class Startscreen extends Component {
 
 
 	render () {
-		let {onCreate} = this.props;
+		let {onCreate, onLogin} = this.props;
 
 		return (
 			<div className="start-page">
