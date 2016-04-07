@@ -8,8 +8,7 @@ import Playpage from './playpage';
 import { ajax } from 'jquery';
 import Dashboard from './Dashboard';
 
-<<<<<<< HEAD
-=======
+
 //let loggedInUser = null;
 
 function renderLogin () {
@@ -98,9 +97,24 @@ let renderDashboard = () => ReactDOM.render (
 
 
 
+<<<<<<< HEAD
 =======
 
 
+=======
+<<<<<<< HEAD
+
+let renderPlaypage () => {
+	ReactDOM.render(
+		<PlayPage onGuess={help}/>,
+		document.querySelector('.app')
+		);
+}
+
+
+
+=======
+>>>>>>> 9e9ddf5e7819c80cd2518812ea682dd21e2c36cc
 >>>>>>> d0b1d6ed3140a9b7cb98da19c7f53288d16fcb02
 // 	ajax({
 // 		url:'http://ironpics.herokuapp.com/registrations',
@@ -155,9 +169,13 @@ let renderDashboard = () => ReactDOM.render (
 // };
 renderStart();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> d0b1d6ed3140a9b7cb98da19c7f53288d16fcb02
+=======
+=======
+>>>>>>> 9e9ddf5e7819c80cd2518812ea682dd21e2c36cc
 
+>>>>>>> d0b1d6ed3140a9b7cb98da19c7f53288d16fcb02
 
->>>>>>> 6cae36dd860cf30ddfdc71f4ae8077bd74025add
