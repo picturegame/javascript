@@ -11,8 +11,14 @@ export default class PlayPage extends Component {
 		img_url: PropTypes.string.isRequired,
 		// guess: PropTypes.string.isRequired,
 		onGuess: PropTypes.func.isRequired,
-		solution: PropTypes.string.isRequired
+		//solution: PropTypes.string.isRequired
 	}
+	//onGuess() {
+		//let score = 0;
+		//if (user.guess === solution){
+			//score=score+1;
+		//}//
+	//}
 
 	dataHandler(){
 		this.props.onGuess;
@@ -25,7 +31,7 @@ export default class PlayPage extends Component {
 				<SSF onData={::this.dataHandler}>
 					<h2>{title}</h2>
 					<img src={img_url} name={img_url}/>
-					<input type="text" name="guess">Take a guess!</input>
+					<input type="text" name="guess"></input>
 					<button>Submit</button>
 				</SSF>
 			</div>

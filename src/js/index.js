@@ -18,18 +18,37 @@ import ImageList from './ImageList';
 // 		)
 // }
 
-let renderLogin = (user, password) => {
-  ajax({
-      url: 'http://ironpics.herokuapp.com/registrations',
-      type: 'POST',
-      data: {
-        "username": "username",
-        "password": "password"      
-    	},
-      cache: false,
-      dataType: 'json',
-      processData: false,
-      contentType: false
+
+//let renderLogin = (user, password) => {
+  //ajax({
+      //url: 'http://ironpics.herokuapp.com/login',
+      //type: 'POST',
+      //data: {
+        //"username": "username",
+        //"password": "password"      
+    	//},
+      //cache: false,
+      //dataType: 'json',
+      //processData: false,
+      //contentType: false
+    //});
+   //};
+
+let renderLogin = (user) => {
+  	let data = new FormData();
+		data.append('username', user.username);
+		data.append('password', user.password);
+	
+	ajax({
+		url: 'http://ironpics.herokuapp.com/login',
+		type: 'POST',
+		data: data,
+		cache: false,
+		dataType: 'json',
+		processData: false,
+		contentType: false
+
+
     }).then(response => {
       if (response.success) {
       //????if (response.success === true)?????
@@ -147,8 +166,13 @@ let renderContribute = () => ReactDOM.render (
 	, document.querySelector('.app')
 	);
 
+<<<<<<< HEAD
 let renderImageList = (image) => ReactDOM.render (
 	<ImageList images={renderImages} username={renderImages} onImgSelect={renderPlayPage}/>
+=======
+let renderImageList = () => ReactDOM.render (
+	<ImageList onImgSelect={renderPlayPage} images={images} username={username}/>
+>>>>>>> d340400093d0cdd9460a32666da8789b6428e58b
 	, document.querySelector('.app')
 	);
 
@@ -163,6 +187,10 @@ let renderDashboard = () => ReactDOM.render (
 
 
 
+<<<<<<< HEAD
 renderStart();
+=======
+renderPlayPage();
+>>>>>>> d340400093d0cdd9460a32666da8789b6428e58b
 
 
