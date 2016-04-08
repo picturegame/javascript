@@ -32,7 +32,7 @@ export default class PlayPage extends Component {
 					<h2>{title}</h2>
 					<img src={img_url} name={img_url}/>
 					<input type="text" name="guess"></input>
-					<button>Submit</button>
+					<input type="hidden" name="solution"></input>
 				</SSF>
 			</div>
 

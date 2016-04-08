@@ -50,12 +50,12 @@ let renderLogin = (user) => {
 
 
     }).then(response => {
-<<<<<<< HEAD
-    	console.log(response);
+
+    	//console.log(response);
       if (response.success) {
-=======
+
       if (response.user) {
->>>>>>> 9cd195ee82ad6bf88b54c401766598f2171fac7c
+
       //????if (response.success === true)?????
 
         // login worked
@@ -82,6 +82,7 @@ let renderLogin = (user) => {
         renderStart();
 
       }
+     }
     });
 }
 
@@ -135,10 +136,9 @@ let renderImages = (image) => {
 		processData: false,
 		contentType: false
 		}).then( () => {
-<<<<<<< HEAD
+
 			alert('Screw This!');
-=======
->>>>>>> 624480ef89c32177ef58d21a4ca898ca2144788d
+
 			renderImageList();
 		});
 }
