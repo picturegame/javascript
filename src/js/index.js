@@ -51,11 +51,11 @@ let renderLogin = (user) => {
 
     }).then(response => {
 
-<<<<<<< HEAD
+
     	//console.log(response);
-=======
+
     	console.log(response);
->>>>>>> 61853b97455148fb2cfa7b6edbda4622a2454503
+
       if (response.success) {
 
       if (response.user) {

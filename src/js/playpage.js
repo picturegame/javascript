@@ -15,9 +15,13 @@ export default class PlayPage extends Component {
 	}
 	//onGuess() {
 		//let score = 0;
+		//let count = 0;
 		//if (user.guess === solution){
 			//score=score+1;
-		//}//
+			//count=count+1;
+		//} else {
+			//count=count+1
+		//}
 	//}
 
 	dataHandler(){
