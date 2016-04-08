@@ -73,15 +73,17 @@ let logout = () => {
 
 
 
-function saveUser () {
+let saveUser = (contact) => {
+	
+ 		let data = new FormData();
+		data.append('username', contact.username);
+		data.append('email', contact.email);
+		data.append('password', contact.password);
+	
 	ajax({
 		url: 'http://ironpics.herokuapp.com/registrations',
 		type: 'POST',
-		data: {
-			username: "username",
-			password: "password",
-			email: "email"
-		},
+		data: data,
 		cache: false,
 		dataType: 'json',
 		processData: false,
@@ -92,7 +94,7 @@ function saveUser () {
 		}
 
 let renderAccount = () => ReactDOM.render (
-	<Account onSave={renderDashboard}/>
+	<Account onSave={saveUser}/>
 	, document.querySelector('.app')
 	);
 
@@ -122,93 +124,7 @@ let renderDashboard = () => ReactDOM.render (
 	, document.querySelector('.app')
 	);
 
-<<<<<<< HEAD
-=======
 
-//renderStart();
-
-
-
-
-
-
-
-renderStart();
-
-
-//ajax({
-//url:'',
-	//type: 'POST'
-	//headers: {
-		//X-access-token: man,
-		//X-girl: boy,
-	//}
-	//data: data,
-	//cache: false,
-	//dataType: 'json',
-	//processData: false,
-	//contentType: false
-//}).then(() => {
-	//}renderStart();
-//);
-
-
-
-
-
-
-// 		url:'http://ironpics.herokuapp.com/registrations',
-// 		type: 'POST'
-// 	//headers: {
-// 		//X-access-token: man,
-// 		//X-girl: boy,
-// 		//}
-// 		data: data,
-// 		cache: false,
-// 		dataType: 'json',
-// 		processData: false,
-// 		contentType: false
-// }).then(() => {
-// 	}renderStart();
-// );
-// ReactDOM.render(
-// 		<Account/> 		, 
-// 		document.querySelector('.app')
-//  		);
-
-
-
-
-
-
-// let createandRender = (player) => {
-// 	let data = new playerData();
-// data.append('username', player.name);
-// data.append('email', player.email);
-// data.append('password', player.password);
-
-// ajax({
-// url:'http://ironpics.herokuapp.com',
-// 	type: 'POST',
-// 	//headers: {
-// 		//X-access-token: man,
-// 		//X-girl: boy,
-// 	//}
-// 	data: form,
-// 	cache: false,
-// 	dataType: 'json',
-// 	processData: false,
-// 	contentType: false
-// }).then(() => {
-// 	renderStart();
-// );
-// 	ReactDOM.render(
-// 		<Account/>
-// 		, document.querySelector('.app')
-// 		);
-// };
-
->>>>>>> 9ae5969a642137dbd9bd55655dd0df037b1391cd
 
 
 renderStart();
