@@ -166,13 +166,8 @@ let renderContribute = () => ReactDOM.render (
 	, document.querySelector('.app')
 	);
 
-<<<<<<< HEAD
-let renderImageList = (image) => ReactDOM.render (
-	<ImageList images={renderImages} username={renderImages} onImgSelect={renderPlayPage}/>
-=======
 let renderImageList = () => ReactDOM.render (
 	<ImageList onImgSelect={renderPlayPage} images={images} username={username}/>
->>>>>>> d340400093d0cdd9460a32666da8789b6428e58b
 	, document.querySelector('.app')
 	);
 
@@ -187,10 +182,7 @@ let renderDashboard = () => ReactDOM.render (
 
 
 
-<<<<<<< HEAD
+
 renderStart();
-=======
-renderPlayPage();
->>>>>>> d340400093d0cdd9460a32666da8789b6428e58b
 
 
