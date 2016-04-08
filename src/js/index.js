@@ -93,6 +93,39 @@ let saveUser = (contact) => {
 		});
 		}
 
+let renderImages = (image) => {
+
+	let data = new FormData();
+	data.append('username', image.username);
+	data.append('img_url', image.img_url);
+	data.append('title', image.title);
+
+	ajax({
+		url: 'http://ironpics.herokuapp.com/registrations',
+		type: 'GET',
+		data: data,
+		cache: false,
+		dataType: 'json',
+		processData: false,
+		contentType: false
+		}).then( () => {
+			alert('Screw This!');
+		});
+		}
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
 let renderAccount = () => ReactDOM.render (
 	<Account onSave={saveUser}/>
 	, document.querySelector('.app')
@@ -114,8 +147,8 @@ let renderContribute = () => ReactDOM.render (
 	, document.querySelector('.app')
 	);
 
-let renderImageList = () => ReactDOM.render (
-	<ImageList onImgSelect={renderPlayPage}/>
+let renderImageList = (image) => ReactDOM.render (
+	<ImageList images={renderImages} username={renderImages} onImgSelect={renderPlayPage}/>
 	, document.querySelector('.app')
 	);
 
@@ -130,6 +163,6 @@ let renderDashboard = () => ReactDOM.render (
 
 
 
-renderImageList();
+renderStart();
 
 
