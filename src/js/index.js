@@ -92,7 +92,7 @@ function saveUser () {
 		}
 
 let renderAccount = () => ReactDOM.render (
-	<Account onSave={renderDashboard}/>
+	<Account onSave={saveUser}/>
 	, document.querySelector('.app')
 	);
 
@@ -122,8 +122,6 @@ let renderDashboard = () => ReactDOM.render (
 	, document.querySelector('.app')
 	);
 
-<<<<<<< HEAD
-=======
 
 //renderStart();
 
@@ -208,8 +206,7 @@ renderStart();
 // 		);
 // };
 
->>>>>>> 9ae5969a642137dbd9bd55655dd0df037b1391cd
 
 
-renderStart();
+
 
