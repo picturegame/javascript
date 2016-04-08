@@ -5,12 +5,12 @@ import Startscreen from './Startscreen';
 import Account from './Account';
 import Contribute from './contribute_page';
 import PlayPage from './playpage';
-import { ajax } from 'jquery';
+import { ajax, ajaxSetup } from 'jquery';
 import Dashboard from './Dashboard';
 import ImageList from './ImageList';
 
 
-
+var loggedInUser = null;
 
 // function renderLogin (player) {
 // 	if username === player.username and password === player.password 
@@ -50,19 +50,20 @@ let renderLogin = (user) => {
 
 
     }).then(response => {
-      if (response.success) {
+      if (response.user) {
       //????if (response.success === true)?????
 
         // login worked
         // do one thhing
 
        // loggedInUser = response.username;
-       username = response.username;
-       password = response.password
+       // username = response.username;
+       // password = response.password
+       	loggedInUser = response.user;
 
         ajaxSetup({
           headers: {
-            'X-Access-Token': response.auth_token
+            'X-Auth-Token': response.user.auth_token
           }
         })
 
@@ -71,6 +72,7 @@ let renderLogin = (user) => {
       } else {
         // login failed
         // do something else
+        console.log('resp:', response);
         alert('The username and password do not match.');
         renderStart();
 
@@ -84,7 +86,7 @@ let logout = () => {
 
   ajaxSetup({
     headers: {
-      'X-Access-Token': ''
+      'X-Auth-Token': ''
     }
   });
   renderStart();
@@ -138,11 +140,11 @@ let postCont = (info) => {
 	
  		let data = new FormData();
 		data.append('title', info.title);
-		data.append('img_url', info.img_url);
+		data.append('image', info.img_url);
 		data.append('solution', info.solution);
 	
 	ajax({
-		url: 'http://ironpics.herokuapp.com/registrations',
+		url: 'http://ironpics.herokuapp.com/posts/create',
 		type: 'POST',
 		data: data,
 		cache: false,
