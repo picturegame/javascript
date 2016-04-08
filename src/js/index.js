@@ -50,26 +50,26 @@ let renderLogin = (user) => {
 
 
     }).then(response => {
-<<<<<<< HEAD
+
     	console.log(response);
       if (response.success) {
-=======
+
       if (response.user) {
->>>>>>> 9cd195ee82ad6bf88b54c401766598f2171fac7c
+
       //????if (response.success === true)?????
 
         // login worked
         // do one thhing
 
        // loggedInUser = response.username;
-<<<<<<< HEAD
+
        username = response.username;
      //  password = response.password
-=======
+
        // username = response.username;
        // password = response.password
        	loggedInUser = response.user;
->>>>>>> 6f887c0a0a39b8b28773f2d17f1062d04121f348
+
 
         ajaxSetup({
           headers: {
