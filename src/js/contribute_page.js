@@ -35,10 +35,10 @@ export default class Contribute extends Component {
 						</Dropzone> 
 					</div>
 					<div className="title-input-div">
-						<input type="text" value="Title" name="title"/>
+						<input type="text" defaultValue="Title" name="title"/>
 					</div>
 					<div className="solution-input-div">
-						<input type="text" value="Solution" name="solution"/>
+						<input type="text" defaultValue="Solution" name="solution"/>
 					</div>
 					<button className="submit_btn">Submit</button>
 				</SSF>

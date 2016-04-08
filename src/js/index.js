@@ -115,7 +115,7 @@ let renderContribute = () => ReactDOM.render (
 	);
 
 let renderImageList = () => ReactDOM.render (
-	<ImageList onImgSelect={PlayPage}/>
+	<ImageList onImgSelect={renderPlayPage}/>
 	, document.querySelector('.app')
 	);
 
