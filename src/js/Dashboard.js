@@ -12,7 +12,7 @@ export default class Dashboard extends Component {
 	render () {
 		let { onCont, onPlay } = this.props;
 		return (
-			<div className="dashboard">?
+			<div className="dashboard">
 				<div className="intro">
 					<h1>Instructions</h1>
 							<p>Chupa chups gummi bears liquorice jelly tiramisu. 
