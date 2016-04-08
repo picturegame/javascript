@@ -13,9 +13,64 @@ import ImageList from './ImageList';
 
 //let loggedInUser = null;
 
-function renderLogin () {
-	console.log("hi");
+// function renderLogin (player) {
+// 	if username === player.username and password === player.password 
+// return 
+// 		)
+// }
+
+let login(user, password) => {
+  ajax({
+      url: 'http://ironpics.herokuapp.com/registrations',
+      type: 'POST',
+      data: {
+        "username": "username",
+        "password": "password"      
+    	},
+      cache: false,
+      dataType: 'json',
+      processData: false,
+      contentType: false
+    }).then(response => {
+      if (response.success) {
+        // login worked
+        // do one thhing
+
+       // loggedInUser = response.username;
+       username = response.username;
+       password = response.password
+
+        ajaxSetup({
+          headers: {
+            'X-Access-Token': response.auth_token
+          }
+        })
+
+        renderDashboard();
+
+      } else {
+        // login failed
+        // do something else
+        alert('The username and password do not match.');
+        renderStart();
+
+      }
+    });
 }
+
+
+let logout() {
+  username = null;
+
+  ajaxSetup({
+    headers: {
+      'X-Access-Token': ''
+    }
+  });
+  renderStart();
+}
+
+
 
 function saveUser () {
 	ajax({
@@ -41,7 +96,7 @@ let renderAccount = () => ReactDOM.render (
 	);
 
 let renderStart = (user) => ReactDOM.render(
-	<Startscreen user={user} onLogin={renderLogin} onCreate={renderAccount}/>
+	<Startscreen username={user} onLogin={renderLogin} onCreate={renderAccount}/>
 	, document.querySelector('.app')
 	);
 
@@ -66,9 +121,7 @@ let renderDashboard = () => ReactDOM.render (
 	, document.querySelector('.app')
 	);
 
-//renderStart();
 
-renderImageList();
 
 
 // let renderStart = () => {
