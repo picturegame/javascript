@@ -15,9 +15,13 @@ export default class PlayPage extends Component {
 	}
 	//onGuess() {
 		//let score = 0;
+		//let count = 0;
 		//if (user.guess === solution){
 			//score=score+1;
-		//}//
+			//count=count+1;
+		//} else {
+			//count=count+1
+		//}
 	//}
 
 	dataHandler(){
@@ -32,7 +36,7 @@ export default class PlayPage extends Component {
 					<h2>{title}</h2>
 					<img src={img_url} name={img_url}/>
 					<input type="text" name="guess"></input>
-					<button>Submit</button>
+					<input type="hidden" name="solution"></input>
 				</SSF>
 			</div>
 

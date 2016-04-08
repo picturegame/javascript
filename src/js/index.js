@@ -50,22 +50,36 @@ let renderLogin = (user) => {
 
 
     }).then(response => {
+
+
+    	//console.log(response);
+
+    	console.log(response);
+
+      if (response.success) {
+
       if (response.user) {
+
       //????if (response.success === true)?????
 
         // login worked
         // do one thhing
 
        // loggedInUser = response.username;
+
+       username = response.username;
+     //  password = response.password
+
        // username = response.username;
        // password = response.password
        	loggedInUser = response.user;
+
 
         ajaxSetup({
           headers: {
             'X-Auth-Token': response.user.auth_token
           }
-        })
+        });
 
         renderDashboard();
 
@@ -77,6 +91,7 @@ let renderLogin = (user) => {
         renderStart();
 
       }
+     }
     });
 }
 
@@ -130,6 +145,12 @@ let renderImages = (image) => {
 		processData: false,
 		contentType: false
 		}).then( () => {
+<<<<<<< HEAD
+=======
+
+			alert('Screw This!');
+
+>>>>>>> b164371f2fcdac2e9c8abaee7767ef72acde6430
 			renderImageList();
 		});
 }
