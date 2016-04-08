@@ -73,15 +73,17 @@ let logout = () => {
 
 
 
-function saveUser () {
+let saveUser = (contact) => {
+	
+ 		let data = new FormData();
+		data.append('username', contact.username);
+		data.append('email', contact.email);
+		data.append('password', contact.password);
+	
 	ajax({
 		url: 'http://ironpics.herokuapp.com/registrations',
 		type: 'POST',
-		data: {
-			username: "username",
-			password: "password",
-			email: "email"
-		},
+		data: data,
 		cache: false,
 		dataType: 'json',
 		processData: false,
@@ -122,6 +124,11 @@ let renderDashboard = () => ReactDOM.render (
 	, document.querySelector('.app')
 	);
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+>>>>>>> efaea02bce3fdd27bb11179c4450857a378448bf
 
 //renderStart();
 
@@ -206,6 +213,12 @@ renderStart();
 // 		);
 // };
 
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> 85e77b45293e477e90285e4c0b276038995cb8c3
+>>>>>>> efaea02bce3fdd27bb11179c4450857a378448bf
 
 
 
