@@ -18,7 +18,7 @@ import ImageList from './ImageList';
 // 		)
 // }
 
-let login(user, password) => {
+let login = (user, password) => {
   ajax({
       url: 'http://ironpics.herokuapp.com/registrations',
       type: 'POST',
@@ -58,7 +58,7 @@ let login(user, password) => {
 }
 
 
-let logout() {
+let logout = () => {
   username = null;
 
   ajaxSetup({
