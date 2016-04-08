@@ -127,5 +127,83 @@ let renderDashboard = () => ReactDOM.render (
 
 
 
+
+
+
 renderStart();
+
+
+//ajax({
+//url:'',
+	//type: 'POST'
+	//headers: {
+		//X-access-token: man,
+		//X-girl: boy,
+	//}
+	//data: data,
+	//cache: false,
+	//dataType: 'json',
+	//processData: false,
+	//contentType: false
+//}).then(() => {
+	//}renderStart();
+//);
+
+
+
+
+
+
+// 		url:'http://ironpics.herokuapp.com/registrations',
+// 		type: 'POST'
+// 	//headers: {
+// 		//X-access-token: man,
+// 		//X-girl: boy,
+// 		//}
+// 		data: data,
+// 		cache: false,
+// 		dataType: 'json',
+// 		processData: false,
+// 		contentType: false
+// }).then(() => {
+// 	}renderStart();
+// );
+// ReactDOM.render(
+// 		<Account/> 		, 
+// 		document.querySelector('.app')
+//  		);
+
+
+
+
+
+
+// let createandRender = (player) => {
+// 	let data = new playerData();
+// data.append('username', player.name);
+// data.append('email', player.email);
+// data.append('password', player.password);
+
+// ajax({
+// url:'http://ironpics.herokuapp.com',
+// 	type: 'POST',
+// 	//headers: {
+// 		//X-access-token: man,
+// 		//X-girl: boy,
+// 	//}
+// 	data: form,
+// 	cache: false,
+// 	dataType: 'json',
+// 	processData: false,
+// 	contentType: false
+// }).then(() => {
+// 	renderStart();
+// );
+// 	ReactDOM.render(
+// 		<Account/>
+// 		, document.querySelector('.app')
+// 		);
+// };
+
+
 
