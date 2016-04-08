@@ -130,10 +130,6 @@ let renderImages = (image) => {
 		processData: false,
 		contentType: false
 		}).then( () => {
-<<<<<<< HEAD
-			alert('Screw This!');
-=======
->>>>>>> 624480ef89c32177ef58d21a4ca898ca2144788d
 			renderImageList();
 		});
 }
@@ -166,7 +162,7 @@ let postCont = (info) => {
 	
  		let data = new FormData();
 		data.append('title', info.title);
-		data.append('image', info.img_url);
+		data.append('image', info.image);
 		data.append('solution', info.solution);
 	
 	ajax({

@@ -15,11 +15,13 @@ export default class Contribute extends Component {
 	}
 
 	dataHandler(formData) {
+		formData.image = this.file;
 		this.props.onSubmit(formData);
 	}
 
 	dropHandler([file]) {
-		this.setState({preview: file.preview})
+		this.setState({preview: file.preview});
+		this.file = file;
 	}
 
 
@@ -30,7 +32,6 @@ export default class Contribute extends Component {
 					<div className="dropzone-wrapper">
 						<Dropzone onDrop={::this.dropHandler}>
 							<span className="drop-span">Drop Something Here</span>
-							<input type="hidden" value={this.state.preview} name="photo"/>
 							<img className="dropzone-img" src={this.state.preview}/>
 						</Dropzone> 
 					</div>
