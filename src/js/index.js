@@ -128,12 +128,31 @@ let renderImages = (image) => {
 		processData: false,
 		contentType: false
 		}).then( () => {
-			alert('Screw This!');
+			renderImageList();
 		});
 		}
 
 
 	
+let postCont = (info) => {
+	
+ 		let data = new FormData();
+		data.append('title', info.title);
+		data.append('img_url', info.img_url);
+		data.append('solution', info.solution);
+	
+	ajax({
+		url: 'http://ironpics.herokuapp.com/registrations',
+		type: 'POST',
+		data: data,
+		cache: false,
+		dataType: 'json',
+		processData: false,
+		contentType: false
+		}).then( () => {
+		renderImageList(); 
+		});
+		}
 
 
 
@@ -162,7 +181,7 @@ let renderPlayPage = () => ReactDOM.render (
 	);
 
 let renderContribute = () => ReactDOM.render (
-	<Contribute onSubmit={renderImageList}/>
+	<Contribute onSubmit={postCont}/>
 	, document.querySelector('.app')
 	);
 
@@ -172,7 +191,7 @@ let renderImageList = () => ReactDOM.render (
 	);
 
 let renderDashboard = () => ReactDOM.render (
-	<Dashboard onPlay={renderImageList} onCont={renderContribute}/>
+	<Dashboard onPlay={renderImages} onCont={renderContribute}/>
 	, document.querySelector('.app')
 	);
 
