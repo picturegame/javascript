@@ -122,7 +122,7 @@ let renderImages = (image) => {
 	data.append('title', image.title);
 
 	ajax({
-		url: 'http://ironpics.herokuapp.com/registrations',
+		// url: 'http://ironpics.herokuapp.com/registrations',
 		type: 'GET',
 		data: data,
 		cache: false,
@@ -130,9 +130,35 @@ let renderImages = (image) => {
 		processData: false,
 		contentType: false
 		}).then( () => {
+<<<<<<< HEAD
+			alert('Screw This!');
+=======
+>>>>>>> 624480ef89c32177ef58d21a4ca898ca2144788d
 			renderImageList();
 		});
-		}
+}
+
+let renderSingleImage = (image) => {
+
+	let data = new FormData();
+	data.append('username', image.username);
+	data.append('img_url', image.img_url);
+	data.append('title', image.title);
+
+
+	ajax({
+		// url: 'http://ironpics.herokuapp.com/registrations',
+		type: 'GET',
+		data: data,
+		cache: false,
+		dataType: 'json',
+		processData: false,
+		contentType: false
+		}).then( () => {
+			renderPlayPage();
+		});
+}
+
 
 
 	
