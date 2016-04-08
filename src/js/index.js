@@ -50,6 +50,7 @@ let renderLogin = (user) => {
 
 
     }).then(response => {
+    	console.log(response);
       if (response.success) {
       //????if (response.success === true)?????
 
