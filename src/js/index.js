@@ -51,7 +51,11 @@ let renderLogin = (user) => {
 
     }).then(response => {
 
+<<<<<<< HEAD
     	//console.log(response);
+=======
+    	console.log(response);
+>>>>>>> 61853b97455148fb2cfa7b6edbda4622a2454503
       if (response.success) {
 
       if (response.user) {
@@ -62,15 +66,20 @@ let renderLogin = (user) => {
         // do one thhing
 
        // loggedInUser = response.username;
+
+       username = response.username;
+     //  password = response.password
+
        // username = response.username;
        // password = response.password
        	loggedInUser = response.user;
+
 
         ajaxSetup({
           headers: {
             'X-Auth-Token': response.user.auth_token
           }
-        })
+        });
 
         renderDashboard();
 
