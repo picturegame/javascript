@@ -120,26 +120,18 @@ let renderDashboard = () => ReactDOM.render (
 	, document.querySelector('.app')
 	);
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
+
 //renderStart();
->>>>>>> fa0f7aa130c3d9deeb70480ff003f062b46f75a8
 
 
 
 
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+
+
 renderStart();
 
-=======
 
-
->>>>>>> 30623a6181b0a556ae3cf109f082396308b4cad4
 //ajax({
 //url:'',
 	//type: 'POST'
@@ -160,19 +152,7 @@ renderStart();
 
 
 
-<<<<<<< HEAD
-=======
-let renderPlaypage () => {
-	ReactDOM.render(
-		<PlayPage onGuess={help}/>,
-		document.querySelector('.app')
-		);
-}
 
-
-
->>>>>>> 30623a6181b0a556ae3cf109f082396308b4cad4
-// 	ajax({
 // 		url:'http://ironpics.herokuapp.com/registrations',
 // 		type: 'POST'
 // 	//headers: {
@@ -223,24 +203,7 @@ let renderPlaypage () => {
 // 		, document.querySelector('.app')
 // 		);
 // };
-<<<<<<< HEAD
-renderStart();
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 30623a6181b0a556ae3cf109f082396308b4cad4
->>>>>>> dd74c5edb752a9477d7467e7d91fdcf5262c1cce
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> d0b1d6ed3140a9b7cb98da19c7f53288d16fcb02
->>>>>>> 450a9b5239ec517d3a3bab93ded1367aec870800
-=======
->>>>>>> 30623a6181b0a556ae3cf109f082396308b4cad4
 
 
 renderStart();
