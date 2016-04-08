@@ -58,13 +58,13 @@ let renderLogin = (user) => {
 
        // loggedInUser = response.username;
        username = response.username;
-       password = response.password
+     //  password = response.password
 
         ajaxSetup({
           headers: {
             'X-Access-Token': response.auth_token
           }
-        })
+        });
 
         renderDashboard();
 
@@ -128,10 +128,9 @@ let renderImages = (image) => {
 		processData: false,
 		contentType: false
 		}).then( () => {
-<<<<<<< HEAD
+
 			alert('Screw This!');
-=======
->>>>>>> 624480ef89c32177ef58d21a4ca898ca2144788d
+
 			renderImageList();
 		});
 }
