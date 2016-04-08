@@ -11,7 +11,7 @@ export default class ImageList extends Component {
 	}
 
 	getImage(user) {
-	let {onImgSelect} = this.props;
+	let {onImgSelect, title, img_url} = this.props;
 	return (
 		<div onClick={onImgSelect.bind(null, user)}>
 			<h5>{user.title}</h5>
@@ -21,7 +21,7 @@ export default class ImageList extends Component {
 	}
 
 	render () {
-		let {user, onImgSelect, title} = this.props;
+		let {user, username} = this.props;
 		return(
 			<div className="img-list-wrapper">
 				<h4>{user.username}</h4>

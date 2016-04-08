@@ -4,14 +4,13 @@ import ReactDOM from 'react-dom';
 import Startscreen from './Startscreen';
 import Account from './Account';
 import Contribute from './contribute_page';
-import Playpage from './playpage';
+import PlayPage from './playpage';
 import { ajax } from 'jquery';
 import Dashboard from './Dashboard';
 import ImageList from './ImageList';
 
 
 
-//let loggedInUser = null;
 
 // function renderLogin (player) {
 // 	if username === player.username and password === player.password 
@@ -121,31 +120,26 @@ let renderDashboard = () => ReactDOM.render (
 	, document.querySelector('.app')
 	);
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+//renderStart();
+>>>>>>> fa0f7aa130c3d9deeb70480ff003f062b46f75a8
 
 
 
-// let renderStart = () => {
-// 	ajax('http://ironpics.herokuapp.com')
-	//ajax({url}).then(data => {
-		//ReactDOM.render(
-	//<Startscreen onCreate={createandRender}/>
-//, document.querySelector('.app')
-	//);
-//});
-//};
-
-//let data = new formData();
-//data.append('username',)
-//data.append('email',)
-//data.append('password_digest',)
-//data.append('image_url',)
-//data.append('solution',)
-//data.append('title',)
-//data.append('guess',)
-//data.append('points',)
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+renderStart();
 
+=======
+
+
+>>>>>>> 30623a6181b0a556ae3cf109f082396308b4cad4
 //ajax({
 //url:'',
 	//type: 'POST'
@@ -166,6 +160,8 @@ let renderDashboard = () => ReactDOM.render (
 
 
 
+<<<<<<< HEAD
+=======
 let renderPlaypage () => {
 	ReactDOM.render(
 		<PlayPage onGuess={help}/>,
@@ -175,6 +171,7 @@ let renderPlaypage () => {
 
 
 
+>>>>>>> 30623a6181b0a556ae3cf109f082396308b4cad4
 // 	ajax({
 // 		url:'http://ironpics.herokuapp.com/registrations',
 // 		type: 'POST'
@@ -226,8 +223,24 @@ let renderPlaypage () => {
 // 		, document.querySelector('.app')
 // 		);
 // };
+<<<<<<< HEAD
+renderStart();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 30623a6181b0a556ae3cf109f082396308b4cad4
+>>>>>>> dd74c5edb752a9477d7467e7d91fdcf5262c1cce
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> d0b1d6ed3140a9b7cb98da19c7f53288d16fcb02
+>>>>>>> 450a9b5239ec517d3a3bab93ded1367aec870800
+=======
+>>>>>>> 30623a6181b0a556ae3cf109f082396308b4cad4
 
 
 renderStart();
