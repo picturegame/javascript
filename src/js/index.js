@@ -18,18 +18,20 @@ import ImageList from './ImageList';
 // 		)
 // }
 
-let renderLogin = (user, password) => {
-  ajax({
-      url: 'http://ironpics.herokuapp.com/registrations',
-      type: 'POST',
-      data: {
-        "username": "username",
-        "password": "password"      
-    	},
-      cache: false,
-      dataType: 'json',
-      processData: false,
-      contentType: false
+let renderLogin = (user) => {
+  	let data = new FormData();
+		data.append('username', user.username);
+		data.append('password', user.password);
+	
+	ajax({
+		url: 'http://ironpics.herokuapp.com/login',
+		type: 'POST',
+		data: data,
+		cache: false,
+		dataType: 'json',
+		processData: false,
+		contentType: false
+
     }).then(response => {
       if (response.success) {
       //????if (response.success === true)?????
@@ -130,6 +132,6 @@ let renderDashboard = () => ReactDOM.render (
 
 
 
-renderImageList();
+renderStart();
 
 
