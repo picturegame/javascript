@@ -122,8 +122,7 @@ let renderDashboard = () => ReactDOM.render (
 	, document.querySelector('.app')
 	);
 
-<<<<<<< HEAD
-=======
+
 
 //renderStart();
 
@@ -208,7 +207,6 @@ renderStart();
 // 		);
 // };
 
->>>>>>> 9ae5969a642137dbd9bd55655dd0df037b1391cd
 
 
 renderStart();
