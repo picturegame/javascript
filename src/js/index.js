@@ -20,7 +20,7 @@ import ImageList from './ImageList';
 
 let renderLogin = (user, password) => {
   ajax({
-      url: 'http://ironpics.herokuapp.com/registrations',
+      url: 'http://ironpics.herokuapp.com/login',
       type: 'POST',
       data: {
         "username": "username",
@@ -130,6 +130,6 @@ let renderDashboard = () => ReactDOM.render (
 
 
 
-renderImageList();
+renderStart();
 
 
