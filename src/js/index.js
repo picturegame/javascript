@@ -18,6 +18,7 @@ import ImageList from './ImageList';
 // 		)
 // }
 
+<<<<<<< HEAD
 let renderLogin = (user, password) => {
   ajax({
       url: 'http://ironpics.herokuapp.com/login',
@@ -30,6 +31,22 @@ let renderLogin = (user, password) => {
       dataType: 'json',
       processData: false,
       contentType: false
+=======
+let renderLogin = (user) => {
+  	let data = new FormData();
+		data.append('username', user.username);
+		data.append('password', user.password);
+	
+	ajax({
+		url: 'http://ironpics.herokuapp.com/login',
+		type: 'POST',
+		data: data,
+		cache: false,
+		dataType: 'json',
+		processData: false,
+		contentType: false
+
+>>>>>>> 1ca5692ed08a4cec24ecfc881c40174dd4bff38c
     }).then(response => {
       if (response.success) {
       //????if (response.success === true)?????
