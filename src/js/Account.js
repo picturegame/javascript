@@ -27,19 +27,19 @@ export default class Account extends Component {
 					<div className="home-btn">
 						<a onClick={renderStart}>Home</a>
 					</div>
-					<div>
+					<div className="whoisyou">
 						<label>
 						 Username
 						<input type="text" name="username"/>
 						</label>
 					</div>
-					<div>
+					<div className="whereisyou">
 						<label>
 						 Email
 						<input type="text" name="email"/>
 						</label>
 					</div>
-					<div>
+					<div className="shhh">
 						<label>
 						Password
 						<input type="password" name="password"/>
