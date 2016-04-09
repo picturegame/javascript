@@ -233,7 +233,7 @@ let renderStart = (user) => ReactDOM.render(
 
 
 let renderPlayPage = () => ReactDOM.render (
-	<PlayPage onGuess={postGuess}/>
+	<PlayPage onGuess={postGuess} img_url={image} title={title}/>
 	, document.querySelector('.app')
 	);
 
