@@ -30,6 +30,17 @@ let renderLogin = (user) => {
 
 
     }).then(response => {
+<<<<<<< HEAD
+      if (response.user) {
+      //????if (response.success === true)?????
+
+        // login worked
+        // do one thhing
+
+       // loggedInUser = response.username;
+       // username = response.username;
+       // password = response.password
+=======
 
     	console.log(response);
 
@@ -39,13 +50,14 @@ let renderLogin = (user) => {
 
        username = response.username;
 
+>>>>>>> 0152b3cbb74609974e2351c837b7ba311f359dc8
        	loggedInUser = response.user;
 
         ajaxSetup({
           headers: {
             'X-Auth-Token': response.user.auth_token
           }
-        });
+        })
 
         renderDashboard(); 
 
@@ -56,7 +68,6 @@ let renderLogin = (user) => {
         renderStart();
 
       }
-     }
     });
 }
 
@@ -100,11 +111,11 @@ let renderImages = (image) => {
 
 	let data = new FormData();
 	data.append('username', image.username);
-	data.append('img_url', image.img_url);
+	data.append('image', image.image);
 	data.append('title', image.title);
 
 	ajax({
-		// url: 'http://ironpics.herokuapp.com/registrations',
+		url: 'http://ironpics.herokuapp.com/posts/create',
 		type: 'GET',
 		data: data,
 		cache: false,
@@ -112,11 +123,14 @@ let renderImages = (image) => {
 		processData: false,
 		contentType: false
 		}).then( () => {
+<<<<<<< HEAD
+=======
 
 
 		alert('Screw This!');
 
 
+>>>>>>> 0152b3cbb74609974e2351c837b7ba311f359dc8
 			renderImageList();
 		});
 
@@ -127,12 +141,12 @@ let renderSingleImage = (image) => {
 
 	let data = new FormData();
 	data.append('username', image.username);
-	data.append('img_url', image.img_url);
+	data.append('image', image.image);
 	data.append('title', image.title);
 
 
 	ajax({
-		// url: 'http://ironpics.herokuapp.com/registrations',
+		url: 'http://ironpics.herokuapp.com/posts/create',
 		type: 'GET',
 		data: data,
 		cache: false,
@@ -164,6 +178,11 @@ let postCont = (info) => {
 		processData: false,
 		contentType: false
 		}).then( () => {
+<<<<<<< HEAD
+		renderImages(); 
+		});
+		}
+=======
 		
 		renderImageList(); 
 	});
@@ -185,6 +204,7 @@ let postGuess = (answer) => {
 		dataType: 'json',
 		processData: false,
 		contentType: false
+>>>>>>> 0152b3cbb74609974e2351c837b7ba311f359dc8
 
     }).then(response => {
 
@@ -247,7 +267,11 @@ let renderContribute = () => ReactDOM.render (
 	);
 
 let renderImageList = () => ReactDOM.render (
+<<<<<<< HEAD
+	<ImageList onImgSelect={renderPlayPage} images={renderImages} username={renderImages}/>
+=======
 	<ImageList onImgSelect={renderPlayPage} images={images} username={username} renderStart={renderStart}/>
+>>>>>>> 0152b3cbb74609974e2351c837b7ba311f359dc8
 	, document.querySelector('.app')
 	);
 
