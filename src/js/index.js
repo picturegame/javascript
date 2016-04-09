@@ -12,15 +12,14 @@ import ImageList from './ImageList';
 
 var loggedInUser = null;
 
-
-
 let renderLogin = (user) => {
-  	let data = new FormData();
-		data.append('username', user.username);
-		data.append('password', user.password);
-	
+
+	let data = new FormData();
+	data.append('username', user.username);
+	data.append('password', user.password);
+
 	ajax({
-		url: 'http://ironpics.herokuapp.com/login',
+		url:'http://ironpics.herokuapp.com/login',
 		type: 'POST',
 		data: data,
 		cache: false,
@@ -28,45 +27,32 @@ let renderLogin = (user) => {
 		processData: false,
 		contentType: false
 
+	}).then(response => {
+		console.log(response)
 
-    }).then(response => {
-      if (response.user) {
-      //????if (response.success === true)?????
+		if (response.user) {
 
-        // login worked
-        // do one thhing
+			loggedInUser = response.username;
+			password = response.password;
 
-       // loggedInUser = response.username;
-       // username = response.username;
-       // password = response.password
+			ajaxSetup({
 
-    	console.log(response);
+				headers: {
+					'X-Auth-Token': response.user.auth_token
+				}
+			})
 
-     if (response.success) {
+			renderDashboard();
+		} else {
 
-      if (response.user) {
 
-        username = response.username;
+			alert('The username and password do not match.');
+			renderStart();
+		}
+	})
 
-       	loggedInUser = response.user;
+}
 
-        ajaxSetup({
-          headers: {
-            'X-Auth-Token': response.user.auth_token
-          }
-        })
-
-        renderDashboard(); 
-
-      } else {
-
-        console.log('resp:', response);
-        alert('The username and password do not match.');
-
-        renderStart();
-      }
-    }
-}}
 
 
 // let logout = () => {
@@ -235,11 +221,7 @@ let renderStart = (user) => ReactDOM.render(
 
 
 let renderPlayPage = () => ReactDOM.render (
-<<<<<<< HEAD
 	<PlayPage onGuess={postGuess} img_url={image} title={title}/>
-=======
-	<PlayPage onGuess={postGuess} renderStart={renderStart}/>
->>>>>>> be8a61c136c8ca65fa81f3a0f917d3895bf2fe60
 	, document.querySelector('.app')
 	);
 
