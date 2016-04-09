@@ -30,7 +30,6 @@ let renderLogin = (user) => {
 
 
     }).then(response => {
-<<<<<<< HEAD
       if (response.user) {
       //????if (response.success === true)?????
 
@@ -40,7 +39,6 @@ let renderLogin = (user) => {
        // loggedInUser = response.username;
        // username = response.username;
        // password = response.password
-=======
 
     	console.log(response);
 
@@ -50,7 +48,6 @@ let renderLogin = (user) => {
 
        username = response.username;
 
->>>>>>> 0152b3cbb74609974e2351c837b7ba311f359dc8
        	loggedInUser = response.user;
 
         ajaxSetup({
@@ -68,7 +65,7 @@ let renderLogin = (user) => {
         renderStart();
 
       }
-    });
+    };
 }
 
 
@@ -123,14 +120,6 @@ let renderImages = (image) => {
 		processData: false,
 		contentType: false
 		}).then( () => {
-<<<<<<< HEAD
-=======
-
-
-		alert('Screw This!');
-
-
->>>>>>> 0152b3cbb74609974e2351c837b7ba311f359dc8
 			renderImageList();
 		});
 
@@ -178,18 +167,14 @@ let postCont = (info) => {
 		processData: false,
 		contentType: false
 		}).then( () => {
-<<<<<<< HEAD
 		renderImages(); 
 		});
 		}
-=======
-		
-		renderImageList(); 
-	});
-}
+
+
 
 let postGuess = (answer) => {
-	
+
  		let data = new FormData();
 		data.append('title', answer.title);
 		data.append('image', answer.image);
@@ -204,7 +189,6 @@ let postGuess = (answer) => {
 		dataType: 'json',
 		processData: false,
 		contentType: false
->>>>>>> 0152b3cbb74609974e2351c837b7ba311f359dc8
 
     }).then(response => {
 
@@ -267,11 +251,7 @@ let renderContribute = () => ReactDOM.render (
 	);
 
 let renderImageList = () => ReactDOM.render (
-<<<<<<< HEAD
-	<ImageList onImgSelect={renderPlayPage} images={renderImages} username={renderImages}/>
-=======
 	<ImageList onImgSelect={renderPlayPage} images={images} username={username} renderStart={renderStart}/>
->>>>>>> 0152b3cbb74609974e2351c837b7ba311f359dc8
 	, document.querySelector('.app')
 	);
 
