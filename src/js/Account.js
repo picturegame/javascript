@@ -6,8 +6,9 @@ export default class Account extends Component {
 		// username: PropTypes.string.isRequired,
 		// email: PropTypes.string.isRequired,
 		// password: PropTypes.string.isRequired,
-		onSave: PropTypes.func.isRequired
-	}
+		onSave: PropTypes.func.isRequired,
+		renderStart: PropTypes.func.isRequired
+}
 
 	dataHandler(formData) {
 		// data.file = this.file;
@@ -19,22 +20,26 @@ export default class Account extends Component {
 
 
 	render () {
+		let { renderStart } = this.props;
 		return (
 			<div className="formView">
 				<SSF onData={::this.dataHandler}>
-					<div>
+					<div className="home-btn">
+						<a onClick={renderStart}>Home</a>
+					</div>
+					<div className="whoisyou">
 						<label>
 						 Username
 						<input type="text" name="username"/>
 						</label>
 					</div>
-					<div>
+					<div className="whereisyou">
 						<label>
 						 Email
 						<input type="text" name="email"/>
 						</label>
 					</div>
-					<div>
+					<div className="shhh">
 						<label>
 						Password
 						<input type="password" name="password"/>

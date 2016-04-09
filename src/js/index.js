@@ -30,6 +30,15 @@ let renderLogin = (user) => {
 
 
     }).then(response => {
+      if (response.user) {
+      //????if (response.success === true)?????
+
+        // login worked
+        // do one thhing
+
+       // loggedInUser = response.username;
+       // username = response.username;
+       // password = response.password
 
     	console.log(response);
 
@@ -45,7 +54,7 @@ let renderLogin = (user) => {
           headers: {
             'X-Auth-Token': response.user.auth_token
           }
-        });
+        })
 
         renderDashboard(); 
 
@@ -56,8 +65,7 @@ let renderLogin = (user) => {
         renderStart();
 
       }
-     }
-    });
+    };
 }
 
 
@@ -100,11 +108,11 @@ let renderImages = (image) => {
 
 	let data = new FormData();
 	data.append('username', image.username);
-	data.append('img_url', image.img_url);
+	data.append('image', image.image);
 	data.append('title', image.title);
 
 	ajax({
-		// url: 'http://ironpics.herokuapp.com/registrations',
+		url: 'http://ironpics.herokuapp.com/posts/create',
 		type: 'GET',
 		data: data,
 		cache: false,
@@ -112,23 +120,22 @@ let renderImages = (image) => {
 		processData: false,
 		contentType: false
 		}).then( () => {
+			renderImageList();
+		});
 
-		alert('Screw This!');
 
-		renderImageList();
-	});
 }
 
 let renderSingleImage = (image) => {
 
 	let data = new FormData();
 	data.append('username', image.username);
-	data.append('img_url', image.img_url);
+	data.append('image', image.image);
 	data.append('title', image.title);
 
 
 	ajax({
-		// url: 'http://ironpics.herokuapp.com/registrations',
+		url: 'http://ironpics.herokuapp.com/posts/create',
 		type: 'GET',
 		data: data,
 		cache: false,
@@ -160,13 +167,14 @@ let postCont = (info) => {
 		processData: false,
 		contentType: false
 		}).then( () => {
-		
-		renderImageList(); 
-	});
-}
+		renderImages(); 
+		});
+		}
+
+
 
 let postGuess = (answer) => {
-	
+
  		let data = new FormData();
 		data.append('title', answer.title);
 		data.append('image', answer.image);
@@ -222,7 +230,7 @@ let postGuess = (answer) => {
 
 
 let renderAccount = () => ReactDOM.render (
-	<Account onSave={saveUser}/>
+	<Account onSave={saveUser} renderStart={renderStart}/>
 	, document.querySelector('.app')
 	);
 
@@ -233,22 +241,26 @@ let renderStart = (user) => ReactDOM.render(
 
 
 let renderPlayPage = () => ReactDOM.render (
+<<<<<<< HEAD
 	<PlayPage onGuess={postGuess} img_url={image} title={title}/>
+=======
+	<PlayPage onGuess={postGuess} renderStart={renderStart}/>
+>>>>>>> be8a61c136c8ca65fa81f3a0f917d3895bf2fe60
 	, document.querySelector('.app')
 	);
 
 let renderContribute = () => ReactDOM.render (
-	<Contribute onSubmit={postCont}/>
+	<Contribute onSubmit={postCont} renderStart={renderStart}/>
 	, document.querySelector('.app')
 	);
 
 let renderImageList = () => ReactDOM.render (
-	<ImageList onImgSelect={renderPlayPage} images={images} username={username}/>
+	<ImageList onImgSelect={renderPlayPage} images={images} username={username} renderStart={renderStart}/>
 	, document.querySelector('.app')
 	);
 
 let renderDashboard = () => ReactDOM.render (
-	<Dashboard onPlay={renderImages} onCont={renderContribute}/>
+	<Dashboard onPlay={renderImages} onCont={renderContribute} renderStart={renderStart}/>
 	, document.querySelector('.app')
 	);
 
@@ -259,6 +271,6 @@ let renderDashboard = () => ReactDOM.render (
 
 
 
-renderStart();
+renderAccount();
 
 
