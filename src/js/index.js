@@ -267,6 +267,6 @@ let renderDashboard = () => ReactDOM.render (
 
 
 
-renderStart();
+renderAccount();
 
 
