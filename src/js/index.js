@@ -112,21 +112,17 @@ let renderImages = (image) => {
 		processData: false,
 		contentType: false
 		}).then( () => {
-<<<<<<< HEAD
 
-=======
->>>>>>> 7a6d31e94ae4ed7afe5f034a0d1f7e8dfd0a85f6
 
 		alert('Screw This!');
 
-<<<<<<< HEAD
 
 			renderImageList();
 		});
-=======
+
 		renderImageList();
 	});
->>>>>>> 7a6d31e94ae4ed7afe5f034a0d1f7e8dfd0a85f6
+
 }
 
 let renderSingleImage = (image) => {
