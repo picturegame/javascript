@@ -46,7 +46,7 @@ let renderLogin = (user) => {
 
       if (response.user) {
 
-       username = response.username;
+        username = response.username;
 
        	loggedInUser = response.user;
 
@@ -62,24 +62,24 @@ let renderLogin = (user) => {
 
         console.log('resp:', response);
         alert('The username and password do not match.');
+
         renderStart();
-
       }
-    };
-}
-
-
-let logout = () => {
-  username = null;
-
-  ajaxSetup({
-    headers: {
-      'X-Auth-Token': ''
     }
-  });
+}}
+
+
+// let logout = () => {
+//    username = null;
+
+//   ajaxSetup({
+//     headers: {
+//       'X-Auth-Token': ''
+//     }
+//   });
   
-  renderStart();
-}
+//   renderStart();
+// }
 
 
 
@@ -122,8 +122,6 @@ let renderImages = (image) => {
 		}).then( () => {
 			renderImageList();
 		});
-
-
 }
 
 let renderSingleImage = (image) => {
@@ -217,15 +215,11 @@ let postGuess = (answer) => {
         alert('Sorry!  Wrong answer.  Try again.');
 			count=count+1    
 		    renderPlayPage();
-
       }
      }
     }
-})
+});
 }
-
-
-
 
 
 
@@ -260,13 +254,4 @@ let renderDashboard = () => ReactDOM.render (
 	, document.querySelector('.app')
 	);
 
-
-
-
-
-
-
-
-renderAccount();
-
-
+renderStart();
