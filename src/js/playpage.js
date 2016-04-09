@@ -11,6 +11,7 @@ export default class PlayPage extends Component {
 		img_url: PropTypes.string.isRequired,
 		// guess: PropTypes.string.isRequired,
 		onGuess: PropTypes.func.isRequired,
+		renderStart:PropTypes.func.isRequired
 		//solution: PropTypes.string.isRequired
 	}
 	//onGuess() {
@@ -29,10 +30,13 @@ export default class PlayPage extends Component {
 	 }
 
 	render () {
-		let {onGuess, title, img_url} = this.props;
+		let {onGuess, title, img_url, renderStart} = this.props;
 		return (
-			<div>
+			<div className="play-page">
 				<SSF onData={::this.dataHandler}>
+					<div className="home-btn">
+						<a onClick={renderStart}>Home</a>
+					</div>
 					<h2>{title}</h2>
 					<img src={img_url} name={img_url}/>
 					<input type="text" name="guess"></input>

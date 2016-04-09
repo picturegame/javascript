@@ -12,27 +12,7 @@ import ImageList from './ImageList';
 
 var loggedInUser = null;
 
-// function renderLogin (player) {
-// 	if username === player.username and password === player.password 
-// return 
-// 		)
-// }
 
-
-//let renderLogin = (user, password) => {
-  //ajax({
-      //url: 'http://ironpics.herokuapp.com/login',
-      //type: 'POST',
-      //data: {
-        //"username": "username",
-        //"password": "password"      
-    	//},
-      //cache: false,
-      //dataType: 'json',
-      //processData: false,
-      //contentType: false
-    //});
-   //};
 
 let renderLogin = (user) => {
   	let data = new FormData();
@@ -50,6 +30,7 @@ let renderLogin = (user) => {
 
 
     }).then(response => {
+<<<<<<< HEAD
       if (response.user) {
       //????if (response.success === true)?????
 
@@ -59,6 +40,17 @@ let renderLogin = (user) => {
        // loggedInUser = response.username;
        // username = response.username;
        // password = response.password
+=======
+
+    	console.log(response);
+
+     if (response.success) {
+
+      if (response.user) {
+
+       username = response.username;
+
+>>>>>>> 0152b3cbb74609974e2351c837b7ba311f359dc8
        	loggedInUser = response.user;
 
         ajaxSetup({
@@ -67,11 +59,10 @@ let renderLogin = (user) => {
           }
         })
 
-        renderDashboard();
+        renderDashboard(); 
 
       } else {
-        // login failed
-        // do something else
+
         console.log('resp:', response);
         alert('The username and password do not match.');
         renderStart();
@@ -89,6 +80,7 @@ let logout = () => {
       'X-Auth-Token': ''
     }
   });
+  
   renderStart();
 }
 
@@ -110,9 +102,10 @@ let saveUser = (contact) => {
 		processData: false,
 		contentType: false
 		}).then( () => {
+
 		renderDashboard(); 
-		});
-		}
+	});
+}
 
 let renderImages = (image) => {
 
@@ -130,8 +123,18 @@ let renderImages = (image) => {
 		processData: false,
 		contentType: false
 		}).then( () => {
+<<<<<<< HEAD
+=======
+
+
+		alert('Screw This!');
+
+
+>>>>>>> 0152b3cbb74609974e2351c837b7ba311f359dc8
 			renderImageList();
 		});
+
+
 }
 
 let renderSingleImage = (image) => {
@@ -151,8 +154,9 @@ let renderSingleImage = (image) => {
 		processData: false,
 		contentType: false
 		}).then( () => {
-			renderPlayPage();
-		});
+			
+		renderPlayPage();
+	});
 }
 
 
@@ -174,14 +178,67 @@ let postCont = (info) => {
 		processData: false,
 		contentType: false
 		}).then( () => {
+<<<<<<< HEAD
 		renderImages(); 
 		});
 		}
+=======
+		
+		renderImageList(); 
+	});
+}
 
+let postGuess = (answer) => {
+	
+ 		let data = new FormData();
+		data.append('title', answer.title);
+		data.append('image', answer.image);
+		data.append('solution', answer.solution);
+		data.append('guess', answer.guess)
+	
+	ajax({
+		// url: 'http://ironpics.herokuapp.com/posts/create',
+		type: 'POST',
+		data: data,
+		cache: false,
+		dataType: 'json',
+		processData: false,
+		contentType: false
+>>>>>>> 0152b3cbb74609974e2351c837b7ba311f359dc8
 
+    }).then(response => {
 
+    	console.log(response);
 
+     if (response.success) {
 
+      if (response.answer) {
+      	solution = response.solution;
+      	guess = response.guess;
+		let score = 0;
+		let count = 0;
+      	if (solution === guess) {
+		//if (user.guess === solution){      		
+
+			alert('Correct! You get 1 Point!');
+
+			score=score+1;
+			count=count+1;
+
+        renderDashboard(); 
+
+      } else {
+
+        console.log('resp:', response);
+        alert('Sorry!  Wrong answer.  Try again.');
+			count=count+1    
+		    renderPlayPage();
+
+      }
+     }
+    }
+})
+}
 
 
 
@@ -189,7 +246,7 @@ let postCont = (info) => {
 
 
 let renderAccount = () => ReactDOM.render (
-	<Account onSave={saveUser}/>
+	<Account onSave={saveUser} renderStart={renderStart}/>
 	, document.querySelector('.app')
 	);
 
@@ -200,22 +257,26 @@ let renderStart = (user) => ReactDOM.render(
 
 
 let renderPlayPage = () => ReactDOM.render (
-	<PlayPage onGuess={renderDashboard}/>
+	<PlayPage onGuess={postGuess} renderStart={renderStart}/>
 	, document.querySelector('.app')
 	);
 
 let renderContribute = () => ReactDOM.render (
-	<Contribute onSubmit={postCont}/>
+	<Contribute onSubmit={postCont} renderStart={renderStart}/>
 	, document.querySelector('.app')
 	);
 
 let renderImageList = () => ReactDOM.render (
+<<<<<<< HEAD
 	<ImageList onImgSelect={renderPlayPage} images={renderImages} username={renderImages}/>
+=======
+	<ImageList onImgSelect={renderPlayPage} images={images} username={username} renderStart={renderStart}/>
+>>>>>>> 0152b3cbb74609974e2351c837b7ba311f359dc8
 	, document.querySelector('.app')
 	);
 
 let renderDashboard = () => ReactDOM.render (
-	<Dashboard onPlay={renderImages} onCont={renderContribute}/>
+	<Dashboard onPlay={renderImages} onCont={renderContribute} renderStart={renderStart}/>
 	, document.querySelector('.app')
 	);
 

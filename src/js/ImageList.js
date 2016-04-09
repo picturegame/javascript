@@ -9,6 +9,7 @@ export default class ImageList extends Component {
 		})).isRequired,
 		
 		onImgSelect: PropTypes.func.isRequired,
+		renderStart:PropTypes.func.isRequired,
 		
 		username: PropTypes.string.isRequired
 	}
@@ -24,9 +25,12 @@ export default class ImageList extends Component {
 	}
 
 	render () {
-		let { username, images} = this.props;
+		let { username, images, renderStart} = this.props;
 		return(
 			<div className="img-list-wrapper">
+				<div className="home-btn">
+						<a onClick={renderStart}>Home</a>
+					</div>
 				<h4>{username}</h4>
 				<div>{images.map(::this.getImage)}</div>
 			</div>
