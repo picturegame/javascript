@@ -120,8 +120,6 @@ let renderImages = (image) => {
 			renderImageList();
 		});
 
-		renderImageList();
-	});
 
 }
 

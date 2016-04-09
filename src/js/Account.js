@@ -22,6 +22,9 @@ export default class Account extends Component {
 		return (
 			<div className="formView">
 				<SSF onData={::this.dataHandler}>
+					<div className="home-btn">
+						<a onClick={renderStart}>Home</a>
+					</div>
 					<div>
 						<label>
 						 Username

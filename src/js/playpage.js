@@ -31,8 +31,11 @@ export default class PlayPage extends Component {
 	render () {
 		let {onGuess, title, img_url} = this.props;
 		return (
-			<div>
+			<div className="play-page">
 				<SSF onData={::this.dataHandler}>
+					<div className="home-btn">
+						<a onClick={renderStart}>Home</a>
+					</div>
 					<h2>{title}</h2>
 					<img src={img_url} name={img_url}/>
 					<input type="text" name="guess"></input>

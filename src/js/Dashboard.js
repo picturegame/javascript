@@ -13,6 +13,9 @@ export default class Dashboard extends Component {
 		let { onCont, onPlay } = this.props;
 		return (
 			<div className="dashboard">
+				<div className="home-btn">
+						<a onClick={renderStart}>Home</a>
+					</div>
 				<div className="intro">
 					<h1>Instructions</h1>
 							<p>Chupa chups gummi bears liquorice jelly tiramisu. 

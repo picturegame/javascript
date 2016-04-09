@@ -29,6 +29,9 @@ export default class Contribute extends Component {
 		return (
 			<div className="contribute-wrapper">
 				<SSF onData={::this.dataHandler}>
+					<div className="home-btn">
+						<a onClick={renderStart}>Home</a>
+					</div>
 					<div className="dropzone-wrapper">
 						<Dropzone onDrop={::this.dropHandler}>
 							<span className="drop-span">Drop Something Here</span>

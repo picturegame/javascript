@@ -27,6 +27,9 @@ export default class ImageList extends Component {
 		let { username, images} = this.props;
 		return(
 			<div className="img-list-wrapper">
+				<div className="home-btn">
+						<a onClick={renderStart}>Home</a>
+					</div>
 				<h4>{username}</h4>
 				<div>{images.map(::this.getImage)}</div>
 			</div>
