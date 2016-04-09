@@ -226,7 +226,7 @@ let postGuess = (answer) => {
 
 
 let renderAccount = () => ReactDOM.render (
-	<Account onSave={saveUser}/>
+	<Account onSave={saveUser} renderStart={renderStart}/>
 	, document.querySelector('.app')
 	);
 
@@ -237,22 +237,22 @@ let renderStart = (user) => ReactDOM.render(
 
 
 let renderPlayPage = () => ReactDOM.render (
-	<PlayPage onGuess={postGuess}/>
+	<PlayPage onGuess={postGuess} renderStart={renderStart}/>
 	, document.querySelector('.app')
 	);
 
 let renderContribute = () => ReactDOM.render (
-	<Contribute onSubmit={postCont}/>
+	<Contribute onSubmit={postCont} renderStart={renderStart}/>
 	, document.querySelector('.app')
 	);
 
 let renderImageList = () => ReactDOM.render (
-	<ImageList onImgSelect={renderPlayPage} images={images} username={username}/>
+	<ImageList onImgSelect={renderPlayPage} images={images} username={username} renderStart={renderStart}/>
 	, document.querySelector('.app')
 	);
 
 let renderDashboard = () => ReactDOM.render (
-	<Dashboard onPlay={renderImages} onCont={renderContribute}/>
+	<Dashboard onPlay={renderImages} onCont={renderContribute} renderStart={renderStart}/>
 	, document.querySelector('.app')
 	);
 

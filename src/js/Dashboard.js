@@ -3,14 +3,15 @@ import React, {Component, PropTypes}from 'react';
 export default class Dashboard extends Component {
 	static propTypes = {
 		onPlay: PropTypes.func.isRequired,
-		onCont: PropTypes.func.isRequired
+		onCont: PropTypes.func.isRequired,
+		renderStart: PropTypes.func.isRequired
 	}
 	clickHandler([file]) {
 
 	}
 
 	render () {
-		let { onCont, onPlay } = this.props;
+		let { onCont, onPlay, renderStart } = this.props;
 		return (
 			<div className="dashboard">
 				<div className="home-btn">

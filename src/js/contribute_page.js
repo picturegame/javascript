@@ -4,7 +4,8 @@ import Dropzone from 'react-dropzone';
 
 export default class Contribute extends Component {
 	static propTypes = {
-		onSubmit: PropTypes.func.isRequired
+		onSubmit: PropTypes.func.isRequired,
+		renderStart: PropTypes.func.isRequired
 	}
 
 	constructor() {
@@ -26,6 +27,7 @@ export default class Contribute extends Component {
 
 
 	render() {
+		let { renderStart} = this.props;
 		return (
 			<div className="contribute-wrapper">
 				<SSF onData={::this.dataHandler}>
