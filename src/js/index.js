@@ -50,36 +50,22 @@ let renderLogin = (user) => {
 
 
     }).then(response => {
-
-
-    	//console.log(response);
-
-    	console.log(response);
-
-      if (response.success) {
-
       if (response.user) {
-
       //????if (response.success === true)?????
 
         // login worked
         // do one thhing
 
        // loggedInUser = response.username;
-
-       username = response.username;
-     //  password = response.password
-
        // username = response.username;
        // password = response.password
        	loggedInUser = response.user;
-
 
         ajaxSetup({
           headers: {
             'X-Auth-Token': response.user.auth_token
           }
-        });
+        })
 
         renderDashboard();
 
@@ -91,7 +77,6 @@ let renderLogin = (user) => {
         renderStart();
 
       }
-     }
     });
 }
 
@@ -133,11 +118,11 @@ let renderImages = (image) => {
 
 	let data = new FormData();
 	data.append('username', image.username);
-	data.append('img_url', image.img_url);
+	data.append('image', image.image);
 	data.append('title', image.title);
 
 	ajax({
-		// url: 'http://ironpics.herokuapp.com/registrations',
+		url: 'http://ironpics.herokuapp.com/posts/create',
 		type: 'GET',
 		data: data,
 		cache: false,
@@ -145,12 +130,6 @@ let renderImages = (image) => {
 		processData: false,
 		contentType: false
 		}).then( () => {
-<<<<<<< HEAD
-=======
-
-			alert('Screw This!');
-
->>>>>>> b164371f2fcdac2e9c8abaee7767ef72acde6430
 			renderImageList();
 		});
 }
@@ -159,12 +138,12 @@ let renderSingleImage = (image) => {
 
 	let data = new FormData();
 	data.append('username', image.username);
-	data.append('img_url', image.img_url);
+	data.append('image', image.image);
 	data.append('title', image.title);
 
 
 	ajax({
-		// url: 'http://ironpics.herokuapp.com/registrations',
+		url: 'http://ironpics.herokuapp.com/posts/create',
 		type: 'GET',
 		data: data,
 		cache: false,
@@ -195,7 +174,7 @@ let postCont = (info) => {
 		processData: false,
 		contentType: false
 		}).then( () => {
-		renderImageList(); 
+		renderImages(); 
 		});
 		}
 
@@ -231,7 +210,7 @@ let renderContribute = () => ReactDOM.render (
 	);
 
 let renderImageList = () => ReactDOM.render (
-	<ImageList onImgSelect={renderPlayPage} images={images} username={username}/>
+	<ImageList onImgSelect={renderPlayPage} images={renderImages} username={renderImages}/>
 	, document.querySelector('.app')
 	);
 
