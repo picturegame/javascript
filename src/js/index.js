@@ -145,12 +145,11 @@ let renderImages = (image) => {
 		processData: false,
 		contentType: false
 		}).then( () => {
-<<<<<<< HEAD
-=======
+
 
 			alert('Screw This!');
 
->>>>>>> b164371f2fcdac2e9c8abaee7767ef72acde6430
+
 			renderImageList();
 		});
 }
