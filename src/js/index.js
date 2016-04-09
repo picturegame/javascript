@@ -235,7 +235,11 @@ let renderStart = (user) => ReactDOM.render(
 
 
 let renderPlayPage = () => ReactDOM.render (
+<<<<<<< HEAD
+	<PlayPage onGuess={postGuess} img_url={image} title={title}/>
+=======
 	<PlayPage onGuess={postGuess} renderStart={renderStart}/>
+>>>>>>> be8a61c136c8ca65fa81f3a0f917d3895bf2fe60
 	, document.querySelector('.app')
 	);
 
