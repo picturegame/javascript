@@ -12,27 +12,7 @@ import ImageList from './ImageList';
 
 var loggedInUser = null;
 
-// function renderLogin (player) {
-// 	if username === player.username and password === player.password 
-// return 
-// 		)
-// }
 
-
-//let renderLogin = (user, password) => {
-  //ajax({
-      //url: 'http://ironpics.herokuapp.com/login',
-      //type: 'POST',
-      //data: {
-        //"username": "username",
-        //"password": "password"      
-    	//},
-      //cache: false,
-      //dataType: 'json',
-      //processData: false,
-      //contentType: false
-    //});
-   //};
 
 let renderLogin = (user) => {
   	let data = new FormData();
@@ -51,29 +31,15 @@ let renderLogin = (user) => {
 
     }).then(response => {
 
-
-    	//console.log(response);
-
     	console.log(response);
 
-      if (response.success) {
+     if (response.success) {
 
       if (response.user) {
 
-      //????if (response.success === true)?????
-
-        // login worked
-        // do one thhing
-
-       // loggedInUser = response.username;
-
        username = response.username;
-     //  password = response.password
 
-       // username = response.username;
-       // password = response.password
        	loggedInUser = response.user;
-
 
         ajaxSetup({
           headers: {
@@ -81,11 +47,10 @@ let renderLogin = (user) => {
           }
         });
 
-        renderDashboard();
+        renderDashboard(); 
 
       } else {
-        // login failed
-        // do something else
+
         console.log('resp:', response);
         alert('The username and password do not match.');
         renderStart();
@@ -104,6 +69,7 @@ let logout = () => {
       'X-Auth-Token': ''
     }
   });
+  
   renderStart();
 }
 
@@ -125,9 +91,10 @@ let saveUser = (contact) => {
 		processData: false,
 		contentType: false
 		}).then( () => {
+
 		renderDashboard(); 
-		});
-		}
+	});
+}
 
 let renderImages = (image) => {
 
@@ -145,14 +112,11 @@ let renderImages = (image) => {
 		processData: false,
 		contentType: false
 		}).then( () => {
-<<<<<<< HEAD
-=======
 
-			alert('Screw This!');
+		alert('Screw This!');
 
->>>>>>> b164371f2fcdac2e9c8abaee7767ef72acde6430
-			renderImageList();
-		});
+		renderImageList();
+	});
 }
 
 let renderSingleImage = (image) => {
@@ -172,8 +136,9 @@ let renderSingleImage = (image) => {
 		processData: false,
 		contentType: false
 		}).then( () => {
-			renderPlayPage();
-		});
+			
+		renderPlayPage();
+	});
 }
 
 
@@ -195,14 +160,61 @@ let postCont = (info) => {
 		processData: false,
 		contentType: false
 		}).then( () => {
+		
 		renderImageList(); 
-		});
-		}
+	});
+}
 
+let postGuess = (answer) => {
+	
+ 		let data = new FormData();
+		data.append('title', answer.title);
+		data.append('image', answer.image);
+		data.append('solution', answer.solution);
+		data.append('guess', answer.guess)
+	
+	ajax({
+		// url: 'http://ironpics.herokuapp.com/posts/create',
+		type: 'POST',
+		data: data,
+		cache: false,
+		dataType: 'json',
+		processData: false,
+		contentType: false
 
+    }).then(response => {
 
+    	console.log(response);
 
+     if (response.success) {
 
+      if (response.answer) {
+      	solution = response.solution;
+      	guess = response.guess;
+		let score = 0;
+		let count = 0;
+      	if (solution === guess) {
+		//if (user.guess === solution){      		
+
+			alert('Correct! You get 1 Point!');
+
+			score=score+1;
+			count=count+1;
+
+        renderDashboard(); 
+
+      } else {
+
+        console.log('resp:', response);
+        alert('Sorry!  Wrong answer.  Try again.');
+			count=count+1    
+		    renderPlayPage();
+
+      }
+     }
+    }
+})
+}
 
 
 
@@ -221,7 +233,7 @@ let renderStart = (user) => ReactDOM.render(
 
 
 let renderPlayPage = () => ReactDOM.render (
-	<PlayPage onGuess={renderDashboard}/>
+	<PlayPage onGuess={postGuess}/>
 	, document.querySelector('.app')
 	);
 
