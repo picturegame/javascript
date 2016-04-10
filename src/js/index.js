@@ -30,7 +30,10 @@ let renderLogin = (user) => {
 
 
     }).then(response => {
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe1f1ddbe6ea9fc50e038e69b69ec3141f71b8ae
       if (response.user) {
       //????if (response.success === true)?????
 
@@ -40,7 +43,10 @@ let renderLogin = (user) => {
        // loggedInUser = response.username;
        // username = response.username;
        // password = response.password
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe1f1ddbe6ea9fc50e038e69b69ec3141f71b8ae
 
     	console.log(response);
 
@@ -50,7 +56,10 @@ let renderLogin = (user) => {
 
        username = response.username;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe1f1ddbe6ea9fc50e038e69b69ec3141f71b8ae
        	loggedInUser = response.user;
 
         ajaxSetup({
@@ -68,7 +77,11 @@ let renderLogin = (user) => {
         renderStart();
 
       }
+<<<<<<< HEAD
     
+=======
+    };
+>>>>>>> fe1f1ddbe6ea9fc50e038e69b69ec3141f71b8ae
 }
 
 
@@ -123,6 +136,7 @@ let renderImages = (image) => {
 		processData: false,
 		contentType: false
 		}).then( () => {
+<<<<<<< HEAD
 
 
 
@@ -130,6 +144,8 @@ let renderImages = (image) => {
 
 
 
+=======
+>>>>>>> fe1f1ddbe6ea9fc50e038e69b69ec3141f71b8ae
 			renderImageList();
 		});
 
@@ -177,18 +193,25 @@ let postCont = (info) => {
 		processData: false,
 		contentType: false
 		}).then( () => {
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe1f1ddbe6ea9fc50e038e69b69ec3141f71b8ae
 		renderImages(); 
 		});
 		}
 
+<<<<<<< HEAD
 		
 		renderImageList(); 
 	
 }
+=======
+
+>>>>>>> fe1f1ddbe6ea9fc50e038e69b69ec3141f71b8ae
 
 let postGuess = (answer) => {
-	
+
  		let data = new FormData();
 		data.append('title', answer.title);
 		data.append('image', answer.image);
@@ -203,7 +226,10 @@ let postGuess = (answer) => {
 		dataType: 'json',
 		processData: false,
 		contentType: false
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe1f1ddbe6ea9fc50e038e69b69ec3141f71b8ae
 
     }).then(response => {
 
@@ -256,7 +282,11 @@ let renderStart = (user) => ReactDOM.render(
 
 
 let renderPlayPage = () => ReactDOM.render (
+<<<<<<< HEAD
+	<PlayPage onGuess={postGuess} img_url={image} title={title}/>
+=======
 	<PlayPage onGuess={postGuess} renderStart={renderStart}/>
+>>>>>>> be8a61c136c8ca65fa81f3a0f917d3895bf2fe60
 	, document.querySelector('.app')
 	);
 
@@ -266,11 +296,15 @@ let renderContribute = () => ReactDOM.render (
 	);
 
 let renderImageList = () => ReactDOM.render (
+<<<<<<< HEAD
 
 	//<ImageList onImgSelect={renderPlayPage} images={renderImages} username={renderImages}/>
 
 	<ImageList onImgSelect={renderPlayPage} images={images} username={username} renderStart={renderStart}/>
 
+=======
+	<ImageList onImgSelect={renderPlayPage} images={images} username={username} renderStart={renderStart}/>
+>>>>>>> fe1f1ddbe6ea9fc50e038e69b69ec3141f71b8ae
 	, document.querySelector('.app')
 	);
 
