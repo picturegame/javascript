@@ -449,8 +449,160 @@ body {
   }
 }
 
+.contribute-wrapper {
+  background-color: #f8f3d5;
+  margin: 0;
+  width: 100%;
+  height: auto;
+  font-family: 'Droid Serif', serif; 
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.dropzone-wrapper {
+  position: relative;
+  top: 50px;
+  left: 40%;
+  display: block;
+  width: 360px;
+  height: 280px;
+  outline-style: hidden;
 
+}
+.dropzone-wrapper img {
+  position: relative; 
+  top: 45px;
+  left: 20%;
+  border: 0;
+}
+.title-input-div {
+  position: relative;
+  display: inline;
+  top: 195px;
+  left: 300px;
+}
+.title-input-div input {
+  width: 250px;
+  height: 45px;
+  font-size: 20px;
+  border-radius: 10px;
+  padding: 6px;
+  border: 4px solid #2f1d19;
+  box-shadow: 3px 3px #2f1d19;
+}
+.solution-input-div {
+  position: relative;
+  display:inline;
+  top:195px;
+  left: 445px;
+}
+.solution-input-div input {
+  width: 250px;
+  height: 45px;
+  border-radius: 10px;
+  font-size: 20px;
+  padding: 6px;
+  border: 4px solid #2f1d19;
+  box-shadow: 3px 3px #2f1d19;
+}
+.submit-btn {
+  position: relative;
+  top: 55px;
+  left: 20%;
+  height: 45px;
+  font-size: 20px;
+  border-radius: 10px;
+  padding: 6px;
+  border: 4px solid #2f1d19;
+  box-shadow: 3px 3px;
 
+}.contribute-wrapper {
+  background-color: #f8f3d5;
+  margin: 0;
+  width: 100%;
+  height: auto;
+  font-family: 'Droid Serif', serif; 
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.dropzone-wrapper {
+  position: relative;
+  top: 50px;
+  left: 40%;
+  display: block;
+  width: 360px;
+  height: 280px;
+  outline-style: hidden;
+
+}
+.dropzone-wrapper img {
+ position: relative;
+  top: -45px;
+  left: -30%;
+  border: 0;
+}
+.title-input-div {
+  position: relative;
+  display: inline;
+  top: 195px;
+  left: 300px;
+}
+.title-input-div input {
+  width: 250px;
+  height: 45px;
+  font-size: 20px;
+  border-radius: 10px;
+  padding: 6px;
+  border: 4px solid #2f1d19;
+  box-shadow: 3px 3px #2f1d19;
+}
+.solution-input-div {
+  position: relative;
+  display:inline;
+  top:195px;
+  left: 445px;
+}
+.solution-input-div input {
+  width: 250px;
+  height: 45px;
+  border-radius: 10px;
+  font-size: 20px;
+  padding: 6px;
+  border: 4px solid #2f1d19;
+  box-shadow: 3px 3px #2f1d19;
+}
+.submit_btn {
+  position: relative;
+  top: 55px;
+  left: 5%;
+  height: 45px;
+  font-size: 20px;
+  border-radius: 10px;
+  padding: 6px;
+  border: 4px solid #2f1d19;
+  box-shadow: 3px 3px;
+}
+
+.drop-span {
+  z-index: 1;
+  position: relative;
+  top: 30px;
+  left: 40px;
+  font-family: 'Droid Serif', serif; 
+}
+
+.dropzone-img {
+  width: 360px;
+  height: 270px;
+  object-fit: cover;
+}
+
+.play-drop-img{
+  width: 360px;
+  height: 270px;
+  object-fit: cover;
+}
 
 
 

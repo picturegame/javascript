@@ -31,7 +31,7 @@ export default class PlayPage extends Component {
 					<div className="playpage-stuff">
 						<span className="playpage-title">{playImage.title}</span>
 						<br/>
-							<img src={playImage.image} name="image"/>
+							<img className="play-drop-img" src={playImage.image} name="image"/>
 							<br/>
 							<label> Caption This Picture: </label>
 							<br/>
