@@ -10,7 +10,10 @@ import Dashboard from './Dashboard';
 import ImageList from './ImageList';
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4fc7873a2e31fa5e4273e25ac9920a808ab48459
 var loggedInUser = null;
 
 let renderLogin = (user) => {
@@ -252,4 +255,8 @@ let renderDashboard = () => ReactDOM.render (
 	, document.querySelector('.app')
 	);
 
+<<<<<<< HEAD
 renderContribute();
+=======
+renderStart();
+>>>>>>> 4fc7873a2e31fa5e4273e25ac9920a808ab48459
