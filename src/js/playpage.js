@@ -45,11 +45,8 @@ export default class PlayPage extends Component {
 					</div>	
 					</SSF>
 			</div>
-
 		)
 	}
 }
 
-
-}
 
