@@ -13,8 +13,8 @@ export default class ImageList extends Component {
 	getImage(image) {
 	let {onImgSelect} = this.props;
 	return (
-		<div className="images-div" onClick={onImgSelect.bind(null, image)}>
-			<h5 className="images-title">{image.title}</h5>
+		<div onClick={onImgSelect.bind(null, image)}>
+			<h5>{image.title}</h5>
 			<img key={image.title} className="img-list-unique" src={image.image}/>
 		</div>
 		);
@@ -28,7 +28,6 @@ export default class ImageList extends Component {
 						<a onClick={renderStart}>Home</a>
 					</div>
 				<div>{images.map(::this.getImage)}</div>
-				<div className="bg-fade"></div>
 			</div>
 		);
 	}

@@ -1,4 +1,3 @@
-
 import React, {Component, PropTypes} from 'react';
 import SSF from 'react-simple-serial-form';
 
@@ -46,4 +45,5 @@ export default class PlayPage extends Component {
 
 		)
 	}
+
 }

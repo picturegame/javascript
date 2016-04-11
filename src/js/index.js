@@ -10,6 +10,7 @@ import Dashboard from './Dashboard';
 import ImageList from './ImageList';
 
 
+
 var loggedInUser = null;
 
 let renderLogin = (user) => {
@@ -251,4 +252,8 @@ let renderDashboard = () => ReactDOM.render (
 	, document.querySelector('.app')
 	);
 
+
+
+
 renderStart();
+
