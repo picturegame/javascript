@@ -8,6 +8,7 @@ import PlayPage from './playpage';
 import { ajax, ajaxSetup } from 'jquery';
 import Dashboard from './Dashboard';
 import ImageList from './ImageList';
+import cookie from 'cookie-js';
 
 
 function ifActiveUser () {
