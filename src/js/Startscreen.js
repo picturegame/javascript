@@ -63,6 +63,3 @@ export default class Startscreen extends Component {
 }
 
 
-
-
-

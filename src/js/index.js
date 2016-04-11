@@ -38,6 +38,7 @@ let renderLogin = (user) => {
 
 		if (response.user) {
 
+
 			loggedInUser = response.username;
 	  const password = response.password;
 
@@ -195,34 +196,7 @@ let postGuess = (answer) => {
 
 
 
-//      if (response.success) {
 
-//       if (response.answer) {
-//       let solution = response.solution;
-//       let guess = response.guess;
-// 		let score = 0;
-// 		let count = 0;
-//       	if (solution === guess) {
-// 		//if (user.guess === solution){      		
-
-// 			alert('Correct! You get 1 Point!');
-
-// 			score=score+1;
-// 			count=count+1;
-
-//         renderDashboard(); 
-
-//       } else {
-
-//         console.log('resp:', response);
-//         alert('Sorry!  Wrong answer.  Try again.');
-// 			count=count+1    
-// 		    renderPlayPage();
-//       }
-//      }
-//     }
-// });
-// }
 
 
 
@@ -257,8 +231,6 @@ let renderDashboard = () => ReactDOM.render (
 	, document.querySelector('.app')
 	);
 
-
-
-
 renderStart();
+
 

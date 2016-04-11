@@ -52,3 +52,4 @@ export default class Contribute extends Component {
 		);
 	}
 }
+
