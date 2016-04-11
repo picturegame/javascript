@@ -255,5 +255,5 @@ let renderDashboard = () => ReactDOM.render (
 
 
 
-renderStart();
+renderContribute();
 
