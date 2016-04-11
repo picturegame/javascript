@@ -25,6 +25,7 @@ export default class Dashboard extends Component {
 			</div>
 			);
 		};
+<<<<<<< HEAD
 	};
 
 // import React, {Component, PropTypes}from 'react';
@@ -62,3 +63,6 @@ export default class Dashboard extends Component {
 // 			);
 // 		};
 // 	};
+=======
+	}
+>>>>>>> 2113219a34ea014e94c8b37e657fbbb38b4f062b

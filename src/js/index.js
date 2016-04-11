@@ -10,6 +10,7 @@ import Dashboard from './Dashboard';
 import ImageList from './ImageList';
 
 
+
 var loggedInUser = null;
 
 let renderLogin = (user) => {
@@ -31,6 +32,7 @@ let renderLogin = (user) => {
 		console.log(response)
 
 		if (response.user) {
+<<<<<<< HEAD
 
 			loggedInUser = response.username;
 	  const password = response.password;
@@ -46,6 +48,23 @@ let renderLogin = (user) => {
 		} else {
 
 
+=======
+
+			loggedInUser = response.username;
+	  const password = response.password;
+
+			ajaxSetup({
+
+				headers: {
+					'X-Auth-Token': response.user.auth_token
+				}
+			})
+
+			renderDashboard();
+		} else {
+
+
+>>>>>>> 2113219a34ea014e94c8b37e657fbbb38b4f062b
 			alert('The username and password do not match.');
 			renderStart();
 		}
@@ -473,6 +492,7 @@ renderStart();
 // 	, document.querySelector('.app')
 // 	);
 
+<<<<<<< HEAD
 // let renderStart = (user) => ReactDOM.render(
 // 	<Startscreen username={user} onLogin={renderLogin} onCreate={renderAccount}/>
 // 	, document.querySelector('.app')
@@ -498,5 +518,8 @@ renderStart();
 // 	<Dashboard onPlay={renderImages} onCont={renderContribute} renderStart={renderStart}/>
 // 	, document.querySelector('.app')
 // 	);
+=======
+renderStart();
+>>>>>>> 2113219a34ea014e94c8b37e657fbbb38b4f062b
 
 // renderStart();

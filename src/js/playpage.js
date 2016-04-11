@@ -31,7 +31,11 @@ export default class PlayPage extends Component {
 					<div className="playpage-stuff">
 						<span className="playpage-title">{playImage.title}</span>
 						<br/>
+<<<<<<< HEAD
 							<img src={playImage.image} name="image"/>
+=======
+							<img className="play-drop-img" src={playImage.image} name="image"/>
+>>>>>>> 2113219a34ea014e94c8b37e657fbbb38b4f062b
 							<br/>
 							<label> Caption This Picture: </label>
 							<br/>
@@ -48,4 +52,8 @@ export default class PlayPage extends Component {
 	}
 }
 
+<<<<<<< HEAD
 
+=======
+}
+>>>>>>> 2113219a34ea014e94c8b37e657fbbb38b4f062b

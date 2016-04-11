@@ -1,3 +1,4 @@
+
 /* CSS Entry Point */
 
 // Turn on freq used libraries
@@ -39,6 +40,7 @@ body {
 	padding: 0px;
 	margin: 0px;
 }
+<<<<<<< HEAD
 
 .instructions {
 	font-family: 'Droid Serif', serif;
@@ -308,61 +310,399 @@ body {
   border: 4px solid #654f44;
   box-shadow: 3px 3px #654f44;
 }
+=======
+>>>>>>> 2113219a34ea014e94c8b37e657fbbb38b4f062b
 
+.instructions {
+	font-family: 'Droid Serif', serif;
+}
 
+.instructions-title {
+	position: relative;
+	top: 75px;
+	left: 135px;
+	font-size: 34px;
+	padding: 0px;
+	margin: 0px;
+	font-family: 'Droid Serif', serif;
+}
 
+.loginInfo {
+	position: relative;
+	top: 100px;
+	left: 100px;
+  display: inline-block;
+}
 
+.iron-pics-title {
+  position: relative;
+  top: -320px;
+  left: 670px;
+  font-size: 102px;
+  padding: 0;
+  margin: 0;
+  color: white;
+  text-shadow: 5px 5px #6293a0;
+  overflow: hidden;
+  display: inline-block;
+}
 
+.on-login{
+  position: relative;
+  top: -120px;
+  left: 820px;
+  height: 40px;
+  width: 140px;
+  border-radius: 7px;
+  background-color: #f9f3d3;
+  font-family: 'Droid Serif', serif;
+  font-size: 24px;
 
+}
 
+.on-create {
+  position: relative;
+  top: -90px;
+  left: 775px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  border-radius: 7px;
+  border: 1px solid #aaa;
+  background-color: #f9f3d3;
+  font-family: 'Droid Serif', serif;
+  font-size: 24px;
+}
 
+.username-login {
+  position: relative;
+  top: -5px;
+  left: 13px;
+  width: 255px;
+  height: 35px;
+  border-radius: 5px;
+  font-size: 24px;
+  font-family: 'Droid Serif', serif;
+  padding-left: 5px;
+}
 
+.username-label {
+  position: relative;
+  top: -330px;
+  left: 550px;
+  font-size: 32px;
+  font-family: 'Droid Serif', serif;
+}
 
+.password-label{
+  position: relative;
+  top: -270px;
+  left: 135px;
+  font-size: 32px;
+  font-family: 'Droid Serif', serif;
+}
 
+.password-login {
+  position: relative;
+  top: -5px;
+  left: 10px;
+  width: 255px;
+  height: 35px;
+  border-radius: 5px;
+  font-family: 'Droid Serif', serif;
+  padding-left: 5px;
+  font-size: 24px;
+}
 
+.dashboard {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 
+.content-div{
+  position: relative;
+  padding: 30px;
+  top: 110px;
+  left: 30px;
+  align-content: space-between;
+}
 
+.login-cont-btn{
+  border-radius: 50%;
+  width: 450px;
+  height: 450px;
+  font-family: 'Droid Serif', serif;
+  font-size: 52px;
+  background-color: #fec947;
+    &:hover{
+      background-color: #fcd169;
+      transition: 2s;
+    }
+  border: 2px solid black;
+  text-shadow: 1px 2px #6293a0;
+  position: relative;
+  left: -40px;
+}
 
+.login-play-btn{
+  border-radius: 50%;
+  width: 450px;
+  height: 450px;
+  font-family: 'Droid Serif', serif;
+  font-size: 52px;
+  background-color: #fec947;
+      &:hover{
+      background-color: #fcd169;
+      transition: 2s;
+    }
+  border: 2px solid black;
+  text-shadow: 1px 2px #6293a0;
+}
 
+.blue-line{
+  width: 100%;
+  height: 200px;
+  background-color: #bed9d4;
+  z-index: -1;
+  position: absolute;
+  top: 280px;
+  left: 0px;
+  text-shadow: 1px 2px black;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// .home-btn{
+//   position: absolute;
+//   top: 15px;
+//   left: 20px;
+//   font-family: 'Droid Serif', serif;
+//   height: 50px;
+//   width: 150px;
+//   background-color: #aecfd8;
+//   color: white;
+//   font-size: 24px;
+//   border-radius: 40px;
+//   border: 3px solid #8ca1a2;
+//   box-shadow: 2px 2px #8ca1a2;
+// }
 
 .formView {
 	background-color: #aecfd8;
 	color: #2f1d19;
+	margin: 0;
+	position: absolute;
+	width: 100%;
+	height: auto;
+	font-family: 'Droid Serif', serif; 
+	z-index: +1;
+	padding-bottom: 10px;
+}
+.formView button {
+	height: 50px;
+	width: 150px;
+	background-color: #aecfd8;
+	color: white;
+	font-size: 24px;
+	border-radius: 40px;
+	border: 3px solid #654f44;
+	box-shadow: 2px 2px #654f44;
+	position: relative;
+	top: 85px;
+	left: 40%;
+}
+.formView2 {
+	position: relative;
+	top:100px;
+	background-image: url('http://www.colorhexa.com/fdc846.png');
+
 }
 .whoisyou {
 	font-size: 45px;
 	margin: 30px;
+	text-shadow: 1px 1px #654f44;
+	position: relative;
+	top: 50px;
+	left: 30%;
+
 }
 .whoisyou span {
 	padding: 12px;
 }
 .whoisyou input {
-	
+	height: 30px;
+	width: 150px;
+	border-radius: 3px;
+	font-size: 17px;
+	padding: 6px;
+	overflow: hidden;
+	border: 4px solid #654f44;
+	box-shadow: 3px 3px #654f44;
 }
+.home-btn {
+	padding: 13px;
+	margin: 12px;
+}
+.home-btn a {
+	font-size: 20px;
+	border: 3px solid #654f44;
+	border-radius: 10px;
+	margin: 12px;
+	padding: 8px;
+	color: #654f44;
+	box-shadow: 2px 2px #654f44;
+}
+.whereisyou {
+	font-size: 45px;
+	margin: 30px;
+	text-shadow: 1px 1px #654f44;
+	position: relative;
+	top: 60px;
+	left: 30%;
+}
+.whereisyou span {
+	padding: 12px;
+}
+.whereisyou input {
+	height: 30px;
+	width: 150px;
+	border-radius: 3px;
+	font-size: 17px;
+	padding: 6px;
+	overflow: hidden;
+	border: 4px solid #654f44;
+	box-shadow: 3px 3px #654f44;
+}
+.shhh {
+	font-size: 45px;
+	margin: 30px;
+	text-shadow: 1px 1px #654f44;
+	position: relative;
+	top: 70px;
+	left: 30%;
+}
+.shhh span {
+	padding: 12px;
+}
+.shhh input {
+	height: 30px;
+	width: 150px;
+	border-radius: 3px;
+	font-size: 17px;
+	padding: 6px;
+	overflow: hidden;
+	border: 4px solid #654f44;
+	box-shadow: 3px 3px #654f44;
+}
+
+
+
+//----------------------------------------------------
+//Image List 
+
+.img-list-wrapper {
+  width: 1282px;
+  display: inline-block;
+}
+
+.img-list-unique {
+  width: 300px;
+  height: 241px;
+  object-fit: cover;
+}
+
+.images-div {
+  border: 1px solid black;
+  float: right;
+  width: 300px;
+  height: 300px;
+  background-color: white;
+  margin: 5px;
+  box-shadow: 3px 3px black;
+}
+
+.images-title {
+  text-align: center;
+  font-family: 'Droid Serif', serif;
+  font-size: 18px;
+  padding: 0;
+  margin: 19px;
+}
+
+//END of Image List
+//-----------------------------------------------------
+
+.contribute-wrapper {
+	background-color: #f8f3d5;
+	margin: 0;
+	width: 100%;
+	height: auto;
+	font-family: 'Droid Serif', serif; 
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+.dropzone-wrapper {
+	position: relative;
+	top: 50px;
+	left: 40%;
+	display: block;
+	width: 360px;
+	height: 280px;
+	outline-style: hidden;
+
+}
+.dropzone-wrapper img {
+	position: relative; 
+	top: 45px;
+	left: 20%;
+	border: 0;
+}
+.title-input-div {
+	position: relative;
+	display: inline;
+	top: 195px;
+	left: 300px;
+}
+.title-input-div input {
+	width: 250px;
+	height: 45px;
+	font-size: 20px;
+	border-radius: 10px;
+	padding: 6px;
+	border: 4px solid #2f1d19;
+	box-shadow: 3px 3px #2f1d19;
+}
+.solution-input-div {
+	position: relative;
+	display:inline;
+	top:195px;
+	left: 445px;
+}
+.solution-input-div input {
+	width: 250px;
+	height: 45px;
+	border-radius: 10px;
+	font-size: 20px;
+	padding: 6px;
+	border: 4px solid #2f1d19;
+	box-shadow: 3px 3px #2f1d19;
+}
+.submit-btn {
+	position: relative;
+	top: 55px;
+	left: 20%;
+	height: 45px;
+	font-size: 20px;
+	border-radius: 10px;
+	padding: 6px;
+	border: 4px solid #2f1d19;
+	box-shadow: 3px 3px;
+
+}
+
+
+
 
 
 .play-page {
@@ -408,7 +748,215 @@ body {
     }
 
   }
+ 
 }
+
+.contribute-wrapper {
+  background-color: #f8f3d5;
+  margin: 0;
+  width: 100%;
+  height: auto;
+  font-family: 'Droid Serif', serif; 
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.dropzone-wrapper {
+  position: relative;
+  top: 50px;
+  left: 40%;
+  display: block;
+  width: 360px;
+  height: 280px;
+  outline-style: hidden;
+
+}
+.dropzone-wrapper img {
+  position: relative; 
+  top: 45px;
+  left: 20%;
+  border: 0;
+}
+.title-input-div {
+  position: relative;
+  display: inline;
+  top: 195px;
+  left: 300px;
+}
+.title-input-div input {
+  width: 250px;
+  height: 45px;
+  font-size: 20px;
+  border-radius: 10px;
+  padding: 6px;
+  border: 4px solid #2f1d19;
+  box-shadow: 3px 3px #2f1d19;
+}
+.solution-input-div {
+  position: relative;
+  display:inline;
+  top:195px;
+  left: 445px;
+}
+.solution-input-div input {
+  width: 250px;
+  height: 45px;
+  border-radius: 10px;
+  font-size: 20px;
+  padding: 6px;
+  border: 4px solid #2f1d19;
+  box-shadow: 3px 3px #2f1d19;
+}
+.submit-btn {
+  position: relative;
+  top: 55px;
+  left: 20%;
+  height: 45px;
+  font-size: 20px;
+  border-radius: 10px;
+  padding: 6px;
+  border: 4px solid #2f1d19;
+  box-shadow: 3px 3px;
+
+}.contribute-wrapper {
+  background-color: #f8f3d5;
+  margin: 0;
+  width: 100%;
+  height: auto;
+  font-family: 'Droid Serif', serif; 
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.dropzone-wrapper {
+  position: relative;
+  top: 50px;
+  left: 40%;
+  display: block;
+  width: 360px;
+  height: 280px;
+  outline-style: hidden;
+
+}
+.dropzone-wrapper img {
+ position: relative;
+  top: -45px;
+  left: -30%;
+  border: 0;
+}
+.title-input-div {
+  position: relative;
+  display: inline;
+  top: 195px;
+  left: 300px;
+}
+.title-input-div input {
+  width: 250px;
+  height: 45px;
+  font-size: 20px;
+  border-radius: 10px;
+  padding: 6px;
+  border: 4px solid #2f1d19;
+  box-shadow: 3px 3px #2f1d19;
+}
+.solution-input-div {
+  position: relative;
+  display:inline;
+  top:195px;
+  left: 445px;
+}
+.solution-input-div input {
+  width: 250px;
+  height: 45px;
+  border-radius: 10px;
+  font-size: 20px;
+  padding: 6px;
+  border: 4px solid #2f1d19;
+  box-shadow: 3px 3px #2f1d19;
+}
+.submit_btn {
+  position: relative;
+  top: 55px;
+  left: 5%;
+  height: 45px;
+  font-size: 20px;
+  border-radius: 10px;
+  padding: 6px;
+  border: 4px solid #2f1d19;
+  box-shadow: 3px 3px;
+}
+
+<<<<<<< HEAD
+.play-page {
+  font-family: 'Droid Serif', serif;
+  .playpage-stuff {
+    text-align: center;
+    height: 600px;
+    width: 600px; 
+    margin: auto;
+    font-size: 16px;
+    color: #2f1d19;
+
+    .playpage-title {
+      font-size: 42px;
+      color: #2f1d19;
+      margin-bottom: 20px;
+    }
+    img {
+      margin-bottom: 20px;
+      border: 2px solid #2f1d19;
+    }
+    label {
+      font-size: 22px;
+      color: #2f1d19;
+      margin-bottom: 20px;
+    }
+    button {
+      margin-top: 30px;
+      height: 40px;
+      width: 140px;
+      border-radius: 7px;
+      background-color: #f9f3d3;
+      font-family: 'Droid Serif', serif;
+      font-size: 24px;
+    }
+    .guess-input {
+      width: 255px;
+      height: 35px;
+      border-radius: 5px;
+      font-size: 24px;
+      font-family: 'Droid Serif', serif;
+      padding-left: 5px;
+    }
+
+  }
+}
+=======
+.drop-span {
+  z-index: 1;
+  position: relative;
+  top: 30px;
+  left: 40px;
+  font-family: 'Droid Serif', serif; 
+}
+
+.dropzone-img {
+  width: 360px;
+  height: 270px;
+  object-fit: cover;
+}
+
+.play-drop-img{
+  width: 360px;
+  height: 270px;
+  object-fit: cover;
+}
+
+
+
+
+
+>>>>>>> 2113219a34ea014e94c8b37e657fbbb38b4f062b
 
 
 

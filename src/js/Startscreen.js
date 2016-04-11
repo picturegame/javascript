@@ -55,9 +55,11 @@ export default class Startscreen extends Component {
 
 			)
 	}
+
 }
 
 
+<<<<<<< HEAD
 // import React, {Component, PropTypes} from 'react';
 // import SSF from 'react-simple-serial-form';
 
@@ -103,4 +105,8 @@ export default class Startscreen extends Component {
 // 			)
 // 	}
 // }
+=======
+
+
+>>>>>>> 2113219a34ea014e94c8b37e657fbbb38b4f062b
 
