@@ -10,6 +10,11 @@ import Dashboard from './Dashboard';
 import ImageList from './ImageList';
 
 
+function ifActiveUser () {
+	return !!cookie.get('username');
+}
+
+
 
 var loggedInUser = null;
 

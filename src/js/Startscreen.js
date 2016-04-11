@@ -1,5 +1,6 @@
 import React, {Component, PropTypes} from 'react';
 import SSF from 'react-simple-serial-form';
+import cookie from 'js-cookie';
 
 export default class Startscreen extends Component {
 	static propTypes = {		
@@ -10,6 +11,9 @@ export default class Startscreen extends Component {
 	//clickHandler
 
 	dataHandler(apiData) {
+		if (apiData.username === response.username && apiData.password === response.password) {
+			cookie.set('username', apiData.username);
+		}
 		this.props.onLogin(apiData);
 	}
 
