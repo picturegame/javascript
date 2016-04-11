@@ -7,12 +7,11 @@ export default class PlayPage extends Component {
 
 
 	static propTypes = {
-		title: PropTypes.string.isRequired,
-		img_url: PropTypes.string.isRequired,
-		// guess: PropTypes.string.isRequired,
-		onGuess: PropTypes.func.isRequired,
-		renderStart:PropTypes.func.isRequired
-		//solution: PropTypes.string.isRequired
+		playImage: PropTypes.object,
+			// guess: PropTypes.string.isRequired,
+			onGuess: PropTypes.func.isRequired,
+			renderStart:PropTypes.func.isRequired
+			//solution: PropTypes.string.isRequired
 	}
 	//onGuess() {
 		//let score = 0;
@@ -25,23 +24,25 @@ export default class PlayPage extends Component {
 		//}
 	//}
 
-	dataHandler(){
-		this.props.onGuess;
+	dataHandler(info){
+		this.props.onGuess(info);
 	 }
 
 	render () {
-		let {onGuess, title, img_url, renderStart} = this.props;
+		let {onGuess, playImage, renderStart} = this.props;
+		console.log(playImage)
 		return (
 			<div className="play-page">
 				<SSF onData={::this.dataHandler}>
 					<div className="home-btn">
 						<a onClick={renderStart}>Home</a>
 					</div>
-					<h2>{title}</h2>
-					<img src={img_url} name={img_url}/>
-					<input type="text" name="guess"></input>
-					<input type="hidden" name="solution"></input>
-				</SSF>
+						<h2>{playImage.title}</h2>
+							<img src={playImage.image} name="image"/>
+							<input type="text" name="guess"></input>
+							<input type="hidden" name="solution" defaultValue={playImage.solution}></input>
+						<button>Submit</button>
+					</SSF>
 			</div>
 
 		)

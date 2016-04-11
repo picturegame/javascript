@@ -10,9 +10,8 @@ import Dashboard from './Dashboard';
 import ImageList from './ImageList';
 
 
+
 var loggedInUser = null;
-
-
 
 let renderLogin = (user) => {
 
@@ -35,7 +34,7 @@ let renderLogin = (user) => {
 		if (response.user) {
 
 			loggedInUser = response.username;
-			const password = response.password;
+	  const password = response.password;
 
 			ajaxSetup({
 
@@ -54,6 +53,21 @@ let renderLogin = (user) => {
 	})
 
 }
+
+
+
+// let logout = () => {
+//    username = null;
+
+//   ajaxSetup({
+//     headers: {
+//       'X-Auth-Token': ''
+//     }
+//   });
+  
+//   renderStart();
+// }
+
 
 
 let saveUser = (contact) => {
@@ -92,16 +106,16 @@ let postCont = (info) => {
 		dataType: 'json',
 		processData: false,
 		contentType: false
-		}).then( () => {
-		renderImages(); 
+		}).then( (data) => {
+		console.log('first',data)
+		renderImages(data); 
 		});
 		}
-
 
 let renderImages = (image) => {
 
 	let data = new FormData();
-	data.append('username', image.username);
+	data.append('user', image.user);
 	data.append('image', image.image);
 	data.append('title', image.title);
 
@@ -113,41 +127,36 @@ let renderImages = (image) => {
 		dataType: 'json',
 		processData: false,
 		contentType: false
-		}).then( () => {
-
-			renderImageList();
+		}).then( (data) => {
+			renderImageList(data);
 		});
-
-
 }
 
-let renderSingleImage = (image) => {
+let renderSingleImage = (data) => {
 
-	let data = new FormData();
-	data.append('username', image.username);
-	data.append('image', image.image);
-	data.append('title', image.title);
+	// let data = new FormData();
+	// data.append('username', image.username);
+	// data.append('image', image.image);
+	// data.append('title', image.title);
 
 
-	ajax({
-		url: 'http://ironpics.herokuapp.com/posts/index',
-		type: 'GET',
-		data: data,
-		cache: false,
-		dataType: 'json',
-		processData: false,
-		contentType: false
-		}).then( () => {
+	// ajax({
+	// 	url: 'http://ironpics.herokuapp.com/posts/index',
+	// 	type: 'GET',
+	// 	data: data,
+	// 	cache: false,
+	// 	dataType: 'json',
+	// 	processData: false,
+	// 	contentType: false
+	// 	}).then( () => {
 			
-		renderPlayPage();
-	});
-}
+		renderPlayPage(data);
+};
 
 
-		
-		//renderImageList(); 
+
 	
-//};
+
 
 
 let postGuess = (answer) => {
@@ -156,54 +165,59 @@ let postGuess = (answer) => {
 		data.append('title', answer.title);
 		data.append('image', answer.image);
 		data.append('solution', answer.solution);
-		data.append('guess', answer.guess)
+		data.append('guesses', answer.guesses);
 	
-	ajax({
-		// url: 'http://ironpics.herokuapp.com/posts/create',
-		type: 'POST',
-		data: data,
-		cache: false,
-		dataType: 'json',
-		processData: false,
-		contentType: false
+	// ajax({
+	// 	url: 'http://ironpics.herokuapp.com/posts/index',
+	// 	type: 'GET',
+	// 	data: data,
+	// 	cache: false,
+	// 	dataType: 'json',
+	// 	processData: false,
+	// 	contentType: false
 
+    // }).then((data) => {
 
-    }).then(response => {
-
-    	console.log(response);
-
-     if (response.success) {
-
-      if (response.answer) {
-      	solution = response.solution;
-      	guess = response.guess;
-		let score = 0;
-		let count = 0;
-      	if (solution === guess) {
-		//if (user.guess === solution){      		
-
-			alert('Correct! You get 1 Point!');
-
-			score=score+1;
-			count=count+1;
-
-        renderDashboard(); 
-
-      } else {
-
-        console.log('resp:', response);
-        alert('Sorry!  Wrong answer.  Try again.');
-			count=count+1    
-		    renderPlayPage();
-
-      }
-     }
-    }
-})
+    	if (answer.guess === answer.solution) {
+    		 alert('Correct!');
+    		 renderDashboard(); 
+    	} else {
+    		console.log(answer.guess);
+    		console.log(answer.solution);
+    		 alert('Incorrect');
+    	};
 }
 
 
 
+//      if (response.success) {
+
+//       if (response.answer) {
+//       let solution = response.solution;
+//       let guess = response.guess;
+// 		let score = 0;
+// 		let count = 0;
+//       	if (solution === guess) {
+// 		//if (user.guess === solution){      		
+
+// 			alert('Correct! You get 1 Point!');
+
+// 			score=score+1;
+// 			count=count+1;
+
+//         renderDashboard(); 
+
+//       } else {
+
+//         console.log('resp:', response);
+//         alert('Sorry!  Wrong answer.  Try again.');
+// 			count=count+1    
+// 		    renderPlayPage();
+//       }
+//      }
+//     }
+// });
+// }
 
 
 
@@ -218,12 +232,8 @@ let renderStart = (user) => ReactDOM.render(
 	);
 
 
-let renderPlayPage = () => ReactDOM.render (
-
-	<PlayPage onGuess={postGuess} img_url={image} title={title} renderStart={renderStart}/>
-
-	//<PlayPage onGuess={postGuess} renderStart={renderStart}/>
- 
+let renderPlayPage = (info) => ReactDOM.render (
+	<PlayPage onGuess={postGuess} playImage={info} renderStart={renderStart}/>
 	, document.querySelector('.app')
 	);
 
@@ -232,16 +242,8 @@ let renderContribute = () => ReactDOM.render (
 	, document.querySelector('.app')
 	);
 
-let renderImageList = () => ReactDOM.render (
-
-
-	//<ImageList onImgSelect={renderPlayPage} images={renderImages} username={renderImages}/>
-
-	<ImageList onImgSelect={renderPlayPage} images={images} username={username} renderStart={renderStart}/>
-
-
-	//<ImageList onImgSelect={renderPlayPage} images={images} username={username} renderStart={renderStart}/>
-
+let renderImageList = (image) => ReactDOM.render (
+	<ImageList onImgSelect={renderPlayPage} images={image} renderStart={renderStart}/>
 	, document.querySelector('.app')
 	);
 
@@ -250,15 +252,4 @@ let renderDashboard = () => ReactDOM.render (
 	, document.querySelector('.app')
 	);
 
-
-
-
-
-
-
-
-renderStart();
-
-
-
-
+renderContribute();
