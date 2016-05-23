@@ -21,6 +21,8 @@ export default class Dashboard extends Component {
 					<button className="login-cont-btn" onClick={onCont}>Contribute</button>
 
 					<button className="login-play-btn" onClick={onPlay}>Play!!</button>
+				</div>
+				<a onClick={renderScoreboard}>ScoreBoard</a>
 				</div>	
 			</div>
 			);

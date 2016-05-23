@@ -8,7 +8,7 @@ import PlayPage from './playpage';
 import { ajax, ajaxSetup } from 'jquery';
 import Dashboard from './Dashboard';
 import ImageList from './ImageList';
-import cookie from 'cookie-js';
+import cookie from 'js-cookie';
 
 
 function ifActiveUser () {
@@ -117,7 +117,8 @@ let postCont = (info) => {
 		console.log('first',data)
 		renderImages(data); 
 		});
-		}
+		}});
+}
 
 let renderImages = (image) => {
 
@@ -174,23 +175,23 @@ let postGuess = (answer) => {
 		data.append('solution', answer.solution);
 		data.append('guesses', answer.guesses);
 	
-	// ajax({
-	// 	url: 'http://ironpics.herokuapp.com/posts/index',
-	// 	type: 'GET',
-	// 	data: data,
-	// 	cache: false,
-	// 	dataType: 'json',
-	// 	processData: false,
-	// 	contentType: false
+	 ajax({
+	 	url: 'http://ironpics.herokuapp.com/posts/index',
+	 	type: 'GET',
+	 	data: data,
+	 	cache: false,
+	 	dataType: 'json',
+	 	processData: false,
+	 	contentType: false
 
-    // }).then((data) => {
+    }).then((data) => {
 
     	if (answer.guess === answer.solution) {
     		 alert('Correct!');
     		 renderDashboard(); 
     	} else {
-    		console.log(answer.guess);
-    		console.log(answer.solution);
+    		//console.log(answer.guess);
+    		//console.log(answer.solution);
     		 alert('Incorrect');
     	};
 }
